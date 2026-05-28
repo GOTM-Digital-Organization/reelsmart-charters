@@ -44,6 +44,38 @@ async function startServer() {
       createContext,
     })
   );
+  // SEO: robots.txt
+  app.get("/robots.txt", (_req, res) => {
+    res.type("text/plain");
+    res.send(
+      `User-agent: *\nAllow: /\n\nSitemap: https://reelsmartcharters.com/sitemap.xml`
+    );
+  });
+
+  // SEO: sitemap.xml
+  app.get("/sitemap.xml", (_req, res) => {
+    const BASE = "https://reelsmartcharters.com";
+    const pages = [
+      { loc: "/", priority: "1.0", changefreq: "weekly" },
+      { loc: "/about", priority: "0.8", changefreq: "monthly" },
+      { loc: "/charters", priority: "0.9", changefreq: "weekly" },
+      { loc: "/gallery", priority: "0.7", changefreq: "monthly" },
+      { loc: "/testimonials", priority: "0.7", changefreq: "monthly" },
+      { loc: "/contact", priority: "0.9", changefreq: "monthly" },
+    ];
+    const today = new Date().toISOString().split("T")[0];
+    const urls = pages
+      .map(
+        (p) =>
+          `  <url>\n    <loc>${BASE}${p.loc}</loc>\n    <lastmod>${today}</lastmod>\n    <changefreq>${p.changefreq}</changefreq>\n    <priority>${p.priority}</priority>\n  </url>`
+      )
+      .join("\n");
+    res.type("application/xml");
+    res.send(
+      `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>`
+    );
+  });
+
   // development mode uses Vite, production mode uses static files
   if (process.env.NODE_ENV === "development") {
     await setupVite(app, server);

@@ -35,3 +35,21 @@
 - [x] Google Fonts (Playfair Display + Barlow Condensed + Inter) loaded
 - [x] Gallery seeded with all 13 real user photos with captions
 - [x] Final checkpoint and delivery to user
+
+## SEO Multi-Page Rebuild
+
+- [x] Create shared Navbar component (used across all pages)
+- [x] Create shared Footer component (used across all pages)
+- [x] Create SEOHead component (unique title, description, canonical, OG tags, JSON-LD per page)
+- [x] Build /about page (Captain bio, boat, equipment, target species, fishing areas)
+- [x] Build /charters page (all packages, FAQ, CTA)
+- [x] Build /gallery page (masonry grid, lightbox, keyboard nav)
+- [x] Build /testimonials page (all reviews, rating summary, leave-a-review CTA)
+- [x] Build /contact page (booking form, contact info, what to expect)
+- [x] Refactor Home page to true landing page with CTAs linking to sub-pages
+- [x] Wire all routes in App.tsx
+- [x] Add sitemap.xml server route (all 6 pages with priorities)
+- [x] Add robots.txt server route pointing to sitemap
+- [x] Add JSON-LD LocalBusiness structured data on every page
+- [x] Add canonical URLs and Open Graph meta tags per page
+- [x] All 16 tests passing after rebuild

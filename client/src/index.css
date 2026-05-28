@@ -1,6 +1,5 @@
 @import "tailwindcss";
 @import "tw-animate-css";
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;800&family=Barlow+Condensed:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -40,6 +39,12 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+
+  /* Font families as Tailwind theme tokens */
+  --font-sans: 'Inter', sans-serif;
+  --font-heading: 'Barlow Condensed', sans-serif;
+  --font-serif: 'Playfair Display', serif;
+  --font-display: 'Playfair Display', serif;
 }
 
 :root {
@@ -147,7 +152,21 @@
   }
 
   /* Navy outline button */
-  .btn-outline-gold {
+  .btn-outline-navy {
+  @apply font-heading tracking-widest uppercase text-sm font-bold cursor-pointer transition-all duration-200;
+  border: 2px solid var(--color-navy);
+  color: var(--color-navy);
+  background: transparent;
+}
+.btn-outline-navy:hover {
+  background: var(--color-navy);
+  color: white;
+}
+.btn-outline-navy:active {
+  transform: scale(0.97);
+}
+
+.btn-outline-gold {
     border: 2px solid oklch(0.80 0.14 80);
     color: oklch(0.80 0.14 80);
     font-family: 'Barlow Condensed', sans-serif;
