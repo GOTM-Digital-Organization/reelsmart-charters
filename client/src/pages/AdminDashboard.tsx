@@ -30,6 +30,7 @@ function AuthGate({ children }: { children: React.ReactNode }) {
               src="/manus-storage/reel-smart-logo-transparent_724165ca.png"
               alt="Reel Smart Charters"
               className="h-20 w-auto object-contain rounded-lg"
+              style={{ backgroundColor: '#ffffff', padding: '6px 12px' }}
             />
           </div>
           <h2 className="text-white font-heading text-xl font-bold mb-2">Admin Access</h2>
@@ -490,6 +491,7 @@ function Dashboard() {
               src="/manus-storage/reel-smart-logo-transparent_724165ca.png"
               alt="Reel Smart Charters"
               className="h-10 w-auto object-contain rounded-md"
+              style={{ backgroundColor: '#ffffff', padding: '3px 6px' }}
             />
           </Link>
         </div>

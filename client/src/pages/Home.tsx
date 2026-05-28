@@ -64,6 +64,7 @@ function Navbar() {
             src="/manus-storage/reel-smart-logo-transparent_724165ca.png"
             alt="Reel Smart Charters"
             className="h-16 w-auto object-contain rounded-lg"
+            style={{ backgroundColor: '#ffffff', padding: '4px 8px' }}
           />
         </button>
 
@@ -782,6 +783,7 @@ function Footer() {
                 src="/manus-storage/reel-smart-logo-transparent_724165ca.png"
                 alt="Reel Smart Charters"
                 className="h-16 w-auto object-contain rounded-lg"
+                style={{ backgroundColor: '#ffffff', padding: '4px 8px' }}
               />
             </div>
             <p className="text-white/50 text-sm leading-relaxed">
