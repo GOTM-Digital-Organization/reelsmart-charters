@@ -159,9 +159,8 @@ function Hero() {
         </div>
       ))}
       {/* Overlay */}
-      <div className="absolute inset-0 bg-navy/70" />
-      <div className="absolute inset-0 bg-gradient-to-r from-navy/95 via-navy/85 to-navy/60" />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy/90 via-navy/30 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/55 to-black/30" />
+      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
 
       {/* Slide indicators */}
       <div className="absolute bottom-24 left-1/2 -translate-x-1/2 flex gap-2 z-10">
