@@ -59,14 +59,12 @@ function Navbar() {
     >
       <div className="container flex items-center justify-between h-16 md:h-20">
         {/* Logo */}
-        <button onClick={() => scrollTo("#hero")} className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-full bg-gold flex items-center justify-center">
-            <Anchor className="w-5 h-5 text-navy" strokeWidth={2.5} />
-          </div>
-          <div className="text-left">
-            <div className="text-white font-heading font-bold text-lg leading-none tracking-wide">REEL SMART</div>
-            <div className="text-gold text-xs font-heading tracking-widest leading-none">CHARTERS</div>
-          </div>
+        <button onClick={() => scrollTo("#hero")} className="flex items-center group">
+          <img
+            src="/manus-storage/reel-smart-logo-transparent_724165ca.png"
+            alt="Reel Smart Charters"
+            className="h-16 w-auto object-contain rounded-lg"
+          />
         </button>
 
         {/* Desktop nav */}
@@ -779,14 +777,12 @@ function Footer() {
         <div className="grid md:grid-cols-3 gap-10 mb-10">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-full bg-gold flex items-center justify-center">
-                <Anchor className="w-5 h-5 text-navy" strokeWidth={2.5} />
-              </div>
-              <div>
-                <div className="text-white font-heading font-bold text-lg leading-none tracking-wide">REEL SMART</div>
-                <div className="text-gold text-xs font-heading tracking-widest leading-none">CHARTERS</div>
-              </div>
+            <div className="flex items-center mb-4">
+              <img
+                src="/manus-storage/reel-smart-logo-transparent_724165ca.png"
+                alt="Reel Smart Charters"
+                className="h-16 w-auto object-contain rounded-lg"
+              />
             </div>
             <p className="text-white/50 text-sm leading-relaxed">
               Premium inshore and nearshore fishing charters in the back bays, mangroves, and coastal waters of Southwest Florida.

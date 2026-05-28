@@ -25,8 +25,12 @@ function AuthGate({ children }: { children: React.ReactNode }) {
     return (
       <div className="min-h-screen bg-navy flex items-center justify-center px-4">
         <div className="bg-navy-mid rounded-2xl p-8 max-w-sm w-full text-center border border-white/10">
-          <div className="w-16 h-16 rounded-full bg-gold/20 flex items-center justify-center mx-auto mb-4">
-            <Anchor className="w-8 h-8 text-gold" />
+          <div className="flex items-center justify-center mx-auto mb-4">
+            <img
+              src="/manus-storage/reel-smart-logo-transparent_724165ca.png"
+              alt="Reel Smart Charters"
+              className="h-20 w-auto object-contain rounded-lg"
+            />
           </div>
           <h2 className="text-white font-heading text-xl font-bold mb-2">Admin Access</h2>
           <p className="text-white/50 text-sm mb-6">Sign in to manage your Reel Smart Charters website.</p>
@@ -481,14 +485,12 @@ function Dashboard() {
       {/* Header */}
       <header className="bg-navy border-b border-white/10 px-6 py-4 flex items-center justify-between">
         <div className="flex items-center gap-3">
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-9 h-9 rounded-full bg-gold flex items-center justify-center">
-              <Anchor className="w-4 h-4 text-navy" strokeWidth={2.5} />
-            </div>
-            <div>
-              <div className="text-white font-heading font-bold text-sm leading-none tracking-wide">REEL SMART</div>
-              <div className="text-gold text-xs font-heading tracking-widest leading-none">ADMIN</div>
-            </div>
+          <Link href="/" className="flex items-center group">
+            <img
+              src="/manus-storage/reel-smart-logo-transparent_724165ca.png"
+              alt="Reel Smart Charters"
+              className="h-10 w-auto object-contain rounded-md"
+            />
           </Link>
         </div>
         <div className="flex items-center gap-4">
