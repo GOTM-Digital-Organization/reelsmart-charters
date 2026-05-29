@@ -229,7 +229,7 @@ export default function LandingPage() {
               Siesta Key · Bradenton · Venice · Inshore & Nearshore
             </h2>
             <p className="text-white/80 text-lg leading-relaxed mb-8 max-w-lg">
-              Captain Jon puts you on snook, redfish, tarpon, and trophy nearshore fish — or you don't pay. 25+ years on these waters. USCG licensed. All gear, bait & license included.
+              Captain Jon puts you on snook, redfish, tarpon, and trophy nearshore fish. 25+ years on these waters. USCG licensed. All gear, bait & license included.
             </p>
 
             {/* Trust badges */}
