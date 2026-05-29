@@ -78,9 +78,9 @@ export default function Footer() {
           <div>
             <h4 className="text-gold font-heading text-xs tracking-widest uppercase mb-4">Contact</h4>
             <div className="space-y-3">
-              <div className="flex items-center gap-3 text-white/50 text-sm">
+              <div className="flex items-center gap-3 text-sm">
                 <Phone className="w-4 h-4 text-gold flex-shrink-0" />
-                <span>TBD — coming soon</span>
+                <a href="tel:+19417025895" className="text-white/50 hover:text-gold transition-colors">(941) 702-5895</a>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="w-4 h-4 text-gold flex-shrink-0" />

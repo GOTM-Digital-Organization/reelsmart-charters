@@ -89,7 +89,7 @@ export const LOCAL_BUSINESS_SCHEMA = {
   url: BASE_URL,
   logo: `${BASE_URL}/manus-storage/reel-smart-logo-transparent_724165ca.png`,
   image: DEFAULT_OG_IMAGE,
-  telephone: "TBD",
+  telephone: "+19417025895",
   email: "Fish@reelsmartcharters.com",
   address: {
     "@type": "PostalAddress",

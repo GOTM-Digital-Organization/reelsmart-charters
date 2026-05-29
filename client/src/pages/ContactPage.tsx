@@ -91,7 +91,7 @@ export default function ContactPage() {
 
               <div className="space-y-5 mb-8">
                 {[
-                  { icon: Phone, label: "Phone", value: "TBD — coming soon", href: null },
+                  { icon: Phone, label: "Phone", value: "(941) 702-5895", href: "tel:+19417025895" },
                   { icon: Mail, label: "Email", value: "Fish@reelsmartcharters.com", href: "mailto:Fish@reelsmartcharters.com" },
                   { icon: MapPin, label: "Location", value: "Sarasota, Florida", href: null },
                   { icon: Clock, label: "Hours", value: "Daily · 5am – 8pm", href: null },
