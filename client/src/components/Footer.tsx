@@ -91,9 +91,16 @@ export default function Footer() {
                   Fish@reelsmartcharters.com
                 </a>
               </div>
-              <div className="flex items-center gap-3 text-white/50 text-sm">
-                <MapPin className="w-4 h-4 text-gold flex-shrink-0" />
-                <span>Sarasota, Florida</span>
+              <div className="flex items-start gap-3 text-sm">
+                <MapPin className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
+                <a
+                  href="https://maps.google.com/?q=1059+N+Tamiami+Trl,+Sarasota,+FL+34236"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white/50 hover:text-gold transition-colors leading-snug"
+                >
+                  1059 N Tamiami Trl<br />Sarasota, FL 34236
+                </a>
               </div>
               <div className="flex items-center gap-3 text-white/50 text-sm">
                 <Clock className="w-4 h-4 text-gold flex-shrink-0" />

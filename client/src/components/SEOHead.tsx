@@ -10,7 +10,7 @@ interface SEOHeadProps {
 
 const SITE_NAME = "Reel Smart Charters";
 const BASE_URL = "https://reelsmartcharters.com";
-const DEFAULT_OG_IMAGE = `${BASE_URL}/og-image.jpg`;
+const DEFAULT_OG_IMAGE = `${BASE_URL}/manus-storage/IMG_8048_c31d63c6.jpeg`;
 
 export default function SEOHead({
   title,
@@ -93,8 +93,10 @@ export const LOCAL_BUSINESS_SCHEMA = {
   email: "Fish@reelsmartcharters.com",
   address: {
     "@type": "PostalAddress",
+    streetAddress: "1059 N Tamiami Trl",
     addressLocality: "Sarasota",
     addressRegion: "FL",
+    postalCode: "34236",
     addressCountry: "US",
   },
   geo: {

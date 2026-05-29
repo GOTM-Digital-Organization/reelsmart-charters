@@ -62,6 +62,8 @@ async function startServer() {
       { loc: "/gallery", priority: "0.7", changefreq: "monthly" },
       { loc: "/testimonials", priority: "0.7", changefreq: "monthly" },
       { loc: "/contact", priority: "0.9", changefreq: "monthly" },
+      { loc: "/fishing-charters-venice-fl", priority: "0.9", changefreq: "monthly" },
+      { loc: "/fishing-charters-bradenton-fl", priority: "0.9", changefreq: "monthly" },
     ];
     const today = new Date().toISOString().split("T")[0];
     const urls = pages

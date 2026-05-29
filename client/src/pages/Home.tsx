@@ -66,11 +66,11 @@ function Hero() {
       <div className="container relative z-10 pt-20">
         <div className="max-w-2xl">
           <p className="section-label mb-4">Sarasota · Bradenton · Venice</p>
-          <h1 className="text-white leading-tight mb-2" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem, 7vw, 5rem)", fontWeight: 800 }}>
-            Tight Lines.
+          <h1 className="text-white leading-tight mb-2" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2rem, 5.5vw, 3.75rem)", fontWeight: 800 }}>
+            Sarasota Fishing Charters
           </h1>
-          <h2 className="text-gold leading-tight mb-6" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(2.5rem, 7vw, 5rem)", fontWeight: 800, fontStyle: "italic" }}>
-            Good Times.
+          <h2 className="text-gold leading-tight mb-6" style={{ fontFamily: "var(--font-display)", fontSize: "clamp(1.5rem, 4vw, 2.75rem)", fontWeight: 700, fontStyle: "italic" }}>
+            Tight Lines. Good Times.
           </h2>
           <p className="text-white/80 text-lg md:text-xl mb-8 leading-relaxed max-w-xl">
             Premium inshore and nearshore fishing charters in the back bays, mangroves, and coastal waters of Southwest Florida. Captain Jon puts you on the fish — you bring the stories home.

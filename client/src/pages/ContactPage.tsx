@@ -93,7 +93,7 @@ export default function ContactPage() {
                 {[
                   { icon: Phone, label: "Phone", value: "(941) 702-5895", href: "tel:+19417025895" },
                   { icon: Mail, label: "Email", value: "Fish@reelsmartcharters.com", href: "mailto:Fish@reelsmartcharters.com" },
-                  { icon: MapPin, label: "Location", value: "Sarasota, Florida", href: null },
+                  { icon: MapPin, label: "Charter Pickup", value: "1059 N Tamiami Trl, Sarasota, FL 34236", href: "https://maps.google.com/?q=1059+N+Tamiami+Trl,+Sarasota,+FL+34236" },
                   { icon: Clock, label: "Hours", value: "Daily · 5am – 8pm", href: null },
                 ].map(({ icon: Icon, label, value, href }) => (
                   <div key={label} className="flex items-start gap-4">
