@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
+import { fireBookingConversion } from "@/lib/gtag";
 import { Phone, Star, Shield, Fish, Clock, Users, CheckCircle, ChevronDown, Award } from "lucide-react";
 
 const PHOTOS = {
@@ -18,43 +19,43 @@ const PHOTOS = {
 
 const PACKAGES = [
   {
-    name: "Half-Day Inshore",
+    name: "Half-Day Bay",
     price: "$650",
     duration: "4 Hours",
-    group: "Up to 6",
+    group: "Up to 4",
     badge: "MOST POPULAR",
     badgeColor: "bg-[#C9A84C] text-[#0A1628]",
-    description: "Sarasota Bay back bays loaded with snook, redfish & trout. Perfect for families and first-timers.",
+    description: "Mangroves, grass flats, and docks. Snook, redfish, trout, and snapper inside Sarasota Bay. Great for families and first-timers.",
     targets: ["Snook", "Redfish", "Trout", "Flounder"],
   },
   {
-    name: "Half-Day Nearshore",
+    name: "Half-Day Gulf",
     price: "$750",
     duration: "4 Hours",
-    group: "Up to 6",
+    group: "Up to 4",
     badge: "CATCH DINNER",
     badgeColor: "bg-[#1B6CA8] text-white",
-    description: "Run out to the nearshore reefs for snapper, grouper, and sheepshead. Fresh fish dinner guaranteed.",
+    description: "Run straight out to the nearshore reefs and ledges. Snapper, grouper, sheepshead, hogfish, and other pelagic species.",
     targets: ["Snapper", "Grouper", "Sheepshead", "Hogfish"],
   },
   {
-    name: "Tarpon Trip",
+    name: "Bucket List Trip",
     price: "$975",
     duration: "6 Hours",
-    group: "Up to 6",
+    group: "Up to 4",
     badge: "BUCKET LIST",
     badgeColor: "bg-[#8B1A1A] text-white",
-    description: "Summer is THE season for giant tarpon. 80–150 lb Silver Kings in Sarasota passes. Unforgettable.",
-    targets: ["Tarpon", "Snook", "Permit", "Jack Crevalle"],
+    description: "Six hours dialed in on one trophy species — pick from tarpon, shark, or goliath grouper. Unforgettable.",
+    targets: ["Tarpon", "Shark", "Goliath Grouper", "Permit"],
   },
   {
     name: "Full-Day Combo",
     price: "$1,400",
     duration: "8 Hours",
-    group: "Up to 6",
+    group: "Up to 4",
     badge: "BEST VALUE",
     badgeColor: "bg-[#2E7D32] text-white",
-    description: "Sunrise in the bay for snook & redfish, then out to the reefs. Two fisheries, one epic day.",
+    description: "The whole story. Sunrise in the bay for snook and redfish, then out to the reefs for snapper and grouper.",
     targets: ["Snook", "Redfish", "Snapper", "Grouper"],
   },
 ];
@@ -121,6 +122,7 @@ export default function LandingPage() {
   const submitInquiry = trpc.contact.submit.useMutation({
     onSuccess: () => {
       setSubmitted(true);
+      fireBookingConversion();
       toast.success("Trip request sent! Captain Jon will be in touch shortly.");
     },
     onError: () => {

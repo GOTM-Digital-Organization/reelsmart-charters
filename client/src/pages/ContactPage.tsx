@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
+import { fireBookingConversion } from "@/lib/gtag";
 import { Phone, Mail, MapPin, Clock, Fish } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -29,6 +30,7 @@ export default function ContactPage() {
     onSuccess: () => {
       setSubmitted(true);
       setForm({ name: "", email: "", phone: "", preferredDate: "", groupSize: "", message: "" });
+      fireBookingConversion();
       toast.success("Inquiry sent! Captain Jon will be in touch soon.");
     },
     onError: (err) => {

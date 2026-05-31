@@ -53,3 +53,8 @@
 - [x] Add JSON-LD LocalBusiness structured data on every page
 - [x] Add canonical URLs and Open Graph meta tags per page
 - [x] All 16 tests passing after rebuild
+
+## Email, Conversion Tracking & Package Updates
+- [x] Set up Resend email integration and wire contact form submissions to jonathansmart4@gmail.com
+- [x] Add Google Ads conversion event (gtag conversion) on booking form submit
+- [x] Review and update charter packages in DB to match current offerings (names, prices, descriptions)

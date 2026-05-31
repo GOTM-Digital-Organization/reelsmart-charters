@@ -5,6 +5,7 @@ import { getSessionCookieOptions } from "./_core/cookies";
 import { systemRouter } from "./_core/systemRouter";
 import { publicProcedure, protectedProcedure, router } from "./_core/trpc";
 import { notifyOwner } from "./_core/notification";
+import { sendBookingNotification } from "./email";
 import {
   getActiveCharterPackages,
   getAllCharterPackages,
@@ -171,8 +172,17 @@ export const appRouter = router({
       )
       .mutation(async ({ input }) => {
         await createContactInquiry(input);
-        // Send owner notification
-        const dateStr = input.preferredDate ? ` on ${input.preferredDate}` : "";
+        // Send email notification to captain
+        await sendBookingNotification({
+          name: input.name,
+          email: input.email,
+          phone: input.phone ?? "",
+          preferredDate: input.preferredDate ?? null,
+          groupSize: input.groupSize ?? 1,
+          charterType: null,
+          message: input.message ?? null,
+        });
+        // Also send Manus owner notification as backup
         const groupStr = input.groupSize ? ` · Group of ${input.groupSize}` : "";
         await notifyOwner({
           title: `New Booking Inquiry from ${input.name}`,
