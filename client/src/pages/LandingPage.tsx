@@ -423,7 +423,7 @@ export default function LandingPage() {
               Sarasota Fishing Charter Packages
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
-              Split between 4–6 people = less than $130/person. All gear, bait, and Florida fishing license included.
+              Base price is for up to 4 people. 5th &amp; 6th person add $50 each. All gear, bait, and Florida fishing license included.
             </p>
           </div>
 
@@ -435,10 +435,11 @@ export default function LandingPage() {
                     {pkg.badge}
                   </span>
                   <h3 className="text-[#0A1628] font-bold text-lg mb-1" style={{ fontFamily: "Georgia, serif" }}>{pkg.name}</h3>
-                  <div className="text-3xl font-bold text-[#C9A84C] mb-3">{pkg.price}</div>
+                  <div className="text-3xl font-bold text-[#C9A84C]">{pkg.price}</div>
+                  <div className="text-gray-400 text-xs mb-2">base price · up to 4 people · 5th &amp; 6th +$50 each</div>
                   <div className="flex items-center gap-3 text-gray-500 text-sm mb-3">
                     <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" />{pkg.duration}</span>
-                    <span className="flex items-center gap-1"><Users className="w-3.5 h-3.5" />{pkg.group}</span>
+                    <span className="flex items-center gap-1"><Users className="w-3.5 h-3.5" />Up to 6</span>
                   </div>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{pkg.description}</p>
                   <div className="flex flex-wrap gap-1">

@@ -76,7 +76,7 @@ export default function ChartersPage() {
             <p className="section-label mb-3">All Packages</p>
             <h2 className="text-white text-3xl md:text-4xl mb-4">Pick the day you've been daydreaming about.</h2>
             <p className="text-white/60 max-w-2xl mx-auto">
-              Up to six passengers per charter. All trips are 100% private — your group only.
+              Base price is for up to 4 people. 5th &amp; 6th person add $50 each. Up to 6 passengers total. All trips are 100% private.
             </p>
           </div>
 
@@ -108,15 +108,19 @@ export default function ChartersPage() {
                     </div>
                     <p className="text-white/60 text-sm leading-relaxed flex-1 mb-4">{pkg.description}</p>
                     <div className="border-t border-white/10 pt-4 mt-auto">
-                      <div className="flex items-end justify-between mb-3">
+                      <div className="flex items-end justify-between mb-1">
                         <div>
-                          <div className="text-white/40 text-xs">Starting at</div>
+                          <div className="text-white/40 text-xs">Base price (up to 4 people)</div>
                           <div className="text-gold font-heading text-2xl font-bold">${pkg.price.toLocaleString()}</div>
                         </div>
                         <div className="text-white/40 text-xs text-right">
-                          {pkg.maxPassengers === 1 ? "1 passenger" : `up to ${pkg.maxPassengers} passengers`}
+                          {pkg.maxPassengers === 1 ? "1 passenger" : "up to 6"}
                         </div>
                       </div>
+                      {pkg.maxPassengers !== 1 && (
+                        <div className="text-white/40 text-xs mb-3">5th &amp; 6th person +$50 each</div>
+                      )}
+                      {pkg.maxPassengers === 1 && <div className="mb-3" />}
                       <Link href="/contact" className="btn-gold w-full py-2.5 rounded text-sm block text-center">
                         Book This Trip
                       </Link>
@@ -128,7 +132,7 @@ export default function ChartersPage() {
           )}
 
           <p className="text-white/40 text-sm text-center mt-8 max-w-2xl mx-auto">
-            <strong className="text-white/60">Note:</strong> A 25% gratuity is automatically added for trips with five or more passengers. For all other trips, a tip of around 20% of the trip price is the industry standard.
+            <strong className="text-white/60">Pricing note:</strong> Base price covers up to 4 people. 5th and 6th passengers are $50 each. A gratuity of around 20% is customary and appreciated.
           </p>
         </div>
       </section>
