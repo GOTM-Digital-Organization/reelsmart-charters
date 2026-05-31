@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
-import { fireBookingConversion } from "@/lib/gtag";
+import { fireBookingConversion, fireCallConversion } from "@/lib/gtag";
 import { Phone, Star, Shield, Fish, Clock, Users, CheckCircle, ChevronDown, Award } from "lucide-react";
 
 const PHOTOS = {
@@ -197,6 +197,7 @@ export default function LandingPage() {
             </div>
             <a
               href="tel:+19417025895"
+              onClick={fireCallConversion}
               className="flex items-center gap-2 bg-[#C9A84C] hover:bg-[#b8933d] text-[#0A1628] font-bold px-4 py-2 rounded-lg transition-colors text-sm"
             >
               <Phone className="w-4 h-4" />
@@ -256,6 +257,7 @@ export default function LandingPage() {
             <div className="flex flex-col sm:flex-row gap-3">
               <a
                 href="tel:+19417025895"
+                onClick={fireCallConversion}
                 className="flex items-center justify-center gap-2 bg-[#C9A84C] hover:bg-[#b8933d] text-[#0A1628] font-bold px-8 py-4 rounded-xl transition-all text-lg shadow-lg hover:shadow-xl active:scale-95"
               >
                 <Phone className="w-5 h-5" />
@@ -283,7 +285,7 @@ export default function LandingPage() {
                 </div>
                 <h3 className="text-[#0A1628] font-bold text-xl mb-2">Trip Request Sent!</h3>
                 <p className="text-gray-600 mb-4">Captain Jon will call or text you within 2 hours to confirm your date.</p>
-                <a href="tel:+19417025895" className="inline-flex items-center gap-2 bg-[#C9A84C] text-[#0A1628] font-bold px-6 py-3 rounded-xl">
+                <a href="tel:+19417025895" onClick={fireCallConversion} className="inline-flex items-center gap-2 bg-[#C9A84C] text-[#0A1628] font-bold px-6 py-3 rounded-xl">
                   <Phone className="w-4 h-4" /> Call Now: (941) 702-5895
                 </a>
               </div>
@@ -385,7 +387,7 @@ export default function LandingPage() {
                   </button>
 
                   <p className="text-center text-gray-400 text-xs">
-                    Or call directly: <a href="tel:+19417025895" className="text-[#0A1628] font-semibold hover:underline">(941) 702-5895</a>
+                    Or call directly: <a href="tel:+19417025895" onClick={fireCallConversion} className="text-[#0A1628] font-semibold hover:underline">(941) 702-5895</a>
                   </p>
                 </form>
               </>
@@ -546,6 +548,7 @@ export default function LandingPage() {
             <div className="mt-8">
               <a
                 href="tel:+19417025895"
+                onClick={fireCallConversion}
                 className="inline-flex items-center gap-2 bg-[#C9A84C] hover:bg-[#b8933d] text-[#0A1628] font-bold px-7 py-4 rounded-xl transition-all text-base"
               >
                 <Phone className="w-5 h-5" />
@@ -648,6 +651,7 @@ export default function LandingPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="tel:+19417025895"
+              onClick={fireCallConversion}
               className="inline-flex items-center justify-center gap-2 bg-[#C9A84C] hover:bg-[#b8933d] text-[#0A1628] font-bold px-8 py-4 rounded-xl transition-all text-lg shadow-lg"
             >
               <Phone className="w-5 h-5" />
