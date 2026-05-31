@@ -2,7 +2,7 @@ import nodemailer from "nodemailer";
 import { ENV } from "./_core/env";
 
 const GMAIL_USER = "jonathansmart4@gmail.com";
-const RECIPIENT = "jonathansmart4@gmail.com";
+const RECIPIENTS = ["jonathansmart4@gmail.com", "tom@gotmdigital.com"];
 
 function createTransporter() {
   return nodemailer.createTransport({
@@ -116,12 +116,12 @@ export async function sendBookingNotification(inquiry: {
     const transporter = createTransporter();
     await transporter.sendMail({
       from: `"Reel Smart Charters" <${GMAIL_USER}>`,
-      to: RECIPIENT,
+      to: RECIPIENTS.join(", "),
       replyTo: inquiry.email,
       subject: `New Charter Inquiry from ${inquiry.name} — ${dateStr}`,
       html,
     });
-    console.log(`[Email] Booking notification sent to ${RECIPIENT}`);
+    console.log(`[Email] Booking notification sent to ${RECIPIENTS.join(", ")}`);
     return true;
   } catch (err) {
     console.error("[Email] Failed to send booking notification:", err);
