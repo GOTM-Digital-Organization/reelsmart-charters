@@ -1,3 +1,4 @@
+import { fireBookingConversion } from "@/lib/gtag";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
@@ -78,6 +79,7 @@ function Hero() {
           <div className="flex flex-wrap gap-4">
             <a
               href="https://fishingbooker.com/embeds/book/2114018"
+              onClick={fireBookingConversion}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold px-8 py-4 rounded text-base"
@@ -221,6 +223,7 @@ function FeaturedCharters() {
                     )}
                     <a
                       href="https://fishingbooker.com/embeds/book/2114018"
+                      onClick={fireBookingConversion}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-gold w-full py-2.5 rounded text-sm block text-center mt-3"
@@ -341,6 +344,7 @@ function CTABanner() {
         </p>
         <a
           href="https://fishingbooker.com/embeds/book/2114018"
+          onClick={fireBookingConversion}
           target="_blank"
           rel="noopener noreferrer"
           className="btn-gold px-10 py-4 rounded text-base inline-block"

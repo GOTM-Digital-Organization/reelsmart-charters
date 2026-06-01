@@ -1,3 +1,4 @@
+import { fireBookingConversion } from "@/lib/gtag";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
@@ -118,6 +119,7 @@ export default function GalleryPage() {
           </p>
           <a
             href="https://fishingbooker.com/embeds/book/2114018"
+            onClick={fireBookingConversion}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold px-10 py-4 rounded text-base inline-flex items-center gap-2"

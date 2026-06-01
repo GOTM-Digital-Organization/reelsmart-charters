@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { fireCallConversion } from "@/lib/gtag";
+import { fireCallConversion, fireBookingConversion } from "@/lib/gtag";
 import { Phone, Star, Shield, Fish, Clock, Users, CheckCircle, ChevronDown, Award } from "lucide-react";
 
 const PHOTOS = {
@@ -175,7 +175,7 @@ export default function LandingPage() {
           className="absolute inset-0 bg-cover bg-center"
           style={{ backgroundImage: `url(${PHOTOS.hero})` }}
         />
-        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(10,22,40,0.88) 50%, rgba(10,22,40,0.45) 100%)" }} />
+        <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(10,22,40,0.60) 40%, rgba(10,22,40,0.20) 100%)" }} />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 py-16 grid lg:grid-cols-2 gap-12 items-center w-full">
           {/* Left: Headline + Trust */}
@@ -228,6 +228,7 @@ export default function LandingPage() {
                 href="https://fishingbooker.com/embeds/book/2114018"
                 target="_blank"
                 rel="noopener noreferrer"
+                onClick={fireBookingConversion}
                 className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all text-lg border border-white/30 backdrop-blur-sm"
               >
                 Book Online Now
@@ -329,6 +330,7 @@ export default function LandingPage() {
                     href="https://fishingbooker.com/embeds/book/2114018"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={fireBookingConversion}
                     className="block text-center bg-[#0A1628] hover:bg-[#1B2F4A] text-white font-semibold py-3 rounded-xl transition-colors text-sm"
                   >
                     Book This Trip
@@ -535,6 +537,7 @@ export default function LandingPage() {
               href="https://fishingbooker.com/embeds/book/2114018"
               target="_blank"
               rel="noopener noreferrer"
+              onClick={fireBookingConversion}
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all text-lg border border-white/30"
             >
               Book Online via FishingBooker

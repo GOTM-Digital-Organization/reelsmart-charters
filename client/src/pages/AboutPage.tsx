@@ -1,3 +1,4 @@
+import { fireBookingConversion } from "@/lib/gtag";
 import { Link } from "wouter";
 import { Shield, Fish, Anchor, Users, ArrowRight, CheckCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -91,6 +92,7 @@ export default function AboutPage() {
 
               <a
                 href="https://fishingbooker.com/embeds/book/2114018"
+                onClick={fireBookingConversion}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-gold px-8 py-3 rounded text-sm inline-flex items-center gap-2"
@@ -205,6 +207,7 @@ export default function AboutPage() {
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="https://fishingbooker.com/embeds/book/2114018"
+              onClick={fireBookingConversion}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-gold px-10 py-4 rounded text-base"

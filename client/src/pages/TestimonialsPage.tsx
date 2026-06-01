@@ -1,3 +1,4 @@
+import { fireBookingConversion } from "@/lib/gtag";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { Star, ArrowRight } from "lucide-react";
@@ -134,6 +135,7 @@ export default function TestimonialsPage() {
             </a>
             <a
               href="https://fishingbooker.com/embeds/book/2114018"
+              onClick={fireBookingConversion}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline-navy px-8 py-3 rounded text-sm"

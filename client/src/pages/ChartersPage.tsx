@@ -1,3 +1,4 @@
+import { fireBookingConversion } from "@/lib/gtag";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
 import { CheckCircle, ArrowRight } from "lucide-react";
@@ -125,6 +126,7 @@ export default function ChartersPage() {
                       {pkg.maxPassengers === 1 && <div className="mb-3" />}
                       <a
                         href="https://fishingbooker.com/embeds/book/2114018"
+                        onClick={fireBookingConversion}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="btn-gold w-full py-2.5 rounded text-sm block text-center"
@@ -196,6 +198,7 @@ export default function ChartersPage() {
           </p>
           <a
             href="https://fishingbooker.com/embeds/book/2114018"
+            onClick={fireBookingConversion}
             target="_blank"
             rel="noopener noreferrer"
             className="btn-gold px-10 py-4 rounded text-base inline-flex items-center gap-2"
