@@ -1,4 +1,4 @@
-import { fireBookingConversion } from "@/lib/gtag";
+import { fireBookingConversion, fireCallConversion} from "@/lib/gtag";
 import { Link } from "wouter";
 import { Shield, Fish, Anchor, Users, Star, Phone, ArrowRight, MapPin } from "lucide-react";
 import Navbar from "@/components/Navbar";
@@ -48,7 +48,7 @@ export default function VenicePage() {
               <a href="https://fishingbooker.com/embeds/book/2114018" onClick={fireBookingConversion} target="_blank" rel="noopener noreferrer" className="btn-gold px-8 py-4 rounded text-base">
                 Book a Venice Charter
               </a>
-              <a href="tel:+19417025895" className="btn-outline-gold px-8 py-4 rounded text-base flex items-center gap-2">
+              <a href="tel:+19417025895" onClick={fireCallConversion} className="btn-outline-gold px-8 py-4 rounded text-base flex items-center gap-2">
                 <Phone className="w-4 h-4" /> (941) 702-5895
               </a>
             </div>
@@ -238,7 +238,7 @@ export default function VenicePage() {
             <a href="https://fishingbooker.com/embeds/book/2114018" onClick={fireBookingConversion} target="_blank" rel="noopener noreferrer" className="btn-gold px-10 py-4 rounded text-base">
               Book Now
             </a>
-            <a href="tel:+19417025895" className="btn-outline-gold px-10 py-4 rounded text-base flex items-center gap-2">
+            <a href="tel:+19417025895" onClick={fireCallConversion} className="btn-outline-gold px-10 py-4 rounded text-base flex items-center gap-2">
               <Phone className="w-4 h-4" /> Call (941) 702-5895
             </a>
           </div>

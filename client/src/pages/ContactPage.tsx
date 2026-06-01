@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { trpc } from "@/lib/trpc";
 import { toast } from "sonner";
-import { fireBookingConversion } from "@/lib/gtag";
+import { fireBookingConversion, fireCallConversion} from "@/lib/gtag";
 import { Phone, Mail, MapPin, Clock, Fish } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";

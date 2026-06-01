@@ -1,4 +1,5 @@
 import { Link } from "wouter";
+import { fireCallConversion } from "@/lib/gtag";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
 const LOGO = "/manus-storage/reel-smart-logo-transparent_724165ca.png";
@@ -80,7 +81,7 @@ export default function Footer() {
             <div className="space-y-3">
               <div className="flex items-center gap-3 text-sm">
                 <Phone className="w-4 h-4 text-gold flex-shrink-0" />
-                <a href="tel:+19417025895" className="text-white/50 hover:text-gold transition-colors">(941) 702-5895</a>
+                <a href="tel:+19417025895" onClick={fireCallConversion} className="text-white/50 hover:text-gold transition-colors">(941) 702-5895</a>
               </div>
               <div className="flex items-center gap-3 text-sm">
                 <Mail className="w-4 h-4 text-gold flex-shrink-0" />
