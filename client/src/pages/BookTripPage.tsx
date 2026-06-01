@@ -104,11 +104,11 @@ export default function BookTripPage() {
                   <iframe
                     src="https://fishingbooker.com/embeds/book/2114018"
                     width="100%"
-                    height="620"
+                    height="900"
                     frameBorder="0"
-                    scrolling="no"
+                    scrolling="yes"
                     title="Book a Fishing Charter with Reel Smart Charters on FishingBooker"
-                    style={{ borderRadius: "8px", minHeight: "600px" }}
+                    style={{ borderRadius: "8px", minHeight: "900px", display: "block" }}
                   />
                 </div>
               </div>
