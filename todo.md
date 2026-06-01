@@ -60,13 +60,13 @@
 - [x] Review and update charter packages in DB to match current offerings (names, prices, descriptions)
 
 ## FishingBooker Integration
-- [ ] Add FishingBooker scripts/styles to index.html
-- [ ] Create reusable FishingBookerWidget React component
-- [ ] Rename nav "Contact" to "Book Trip", update route to /book
-- [ ] Replace Home page booking CTAs with FishingBooker embed
-- [ ] Replace Charters page booking buttons with FishingBooker embed
-- [ ] Replace Landing page contact form with FishingBooker embed + trust badge
-- [ ] Replace ContactPage with BookTripPage using FishingBooker embed
-- [ ] Update Venice and Bradenton pages booking buttons
+- [x] Add FishingBooker scripts/styles to index.html
+- [x] Create reusable FishingBookerWidget React component
+- [x] Rename nav "Contact" to "Book Trip", update route to /book
+- [x] Replace Home page booking CTAs with FishingBooker embed
+- [x] Replace Charters page booking buttons with FishingBooker embed
+- [x] Replace Landing page contact form with FishingBooker embed + trust badge
+- [x] Replace ContactPage with BookTripPage using FishingBooker embed
+- [x] Update Venice and Bradenton pages booking buttons
 - [x] Add FishingBooker trust badge sitewide
-- [ ] Update App.tsx route /contact -> /book
+- [x] Update App.tsx route /contact -> /book
