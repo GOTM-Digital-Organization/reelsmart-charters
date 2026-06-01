@@ -252,11 +252,11 @@ export default function LandingPage() {
               <iframe
                 src="https://fishingbooker.com/embeds/book/2114018"
                 width="100%"
-                height="520"
+                height="900"
                 frameBorder="0"
-                scrolling="no"
+                scrolling="yes"
                 title="Book a Fishing Charter with Reel Smart Charters"
-                style={{ borderRadius: "8px", minHeight: "500px" }}
+                style={{ borderRadius: "8px", minHeight: "900px", display: "block" }}
               />
             </div>
             <div className="px-6 pb-4 text-center">
