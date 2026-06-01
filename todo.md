@@ -58,3 +58,15 @@
 - [x] Set up Resend email integration and wire contact form submissions to jonathansmart4@gmail.com
 - [x] Add Google Ads conversion event (gtag conversion) on booking form submit
 - [x] Review and update charter packages in DB to match current offerings (names, prices, descriptions)
+
+## FishingBooker Integration
+- [ ] Add FishingBooker scripts/styles to index.html
+- [ ] Create reusable FishingBookerWidget React component
+- [ ] Rename nav "Contact" to "Book Trip", update route to /book
+- [ ] Replace Home page booking CTAs with FishingBooker embed
+- [ ] Replace Charters page booking buttons with FishingBooker embed
+- [ ] Replace Landing page contact form with FishingBooker embed + trust badge
+- [ ] Replace ContactPage with BookTripPage using FishingBooker embed
+- [ ] Update Venice and Bradenton pages booking buttons
+- [x] Add FishingBooker trust badge sitewide
+- [ ] Update App.tsx route /contact -> /book

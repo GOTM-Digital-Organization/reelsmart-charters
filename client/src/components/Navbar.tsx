@@ -11,7 +11,7 @@ const NAV_LINKS = [
   { label: "Charters", href: "/charters" },
   { label: "Gallery", href: "/gallery" },
   { label: "Testimonials", href: "/testimonials" },
-  { label: "Contact", href: "/contact" },
+  { label: "Book Trip", href: "/book" },
 ];
 
 export default function Navbar() {
@@ -72,12 +72,14 @@ export default function Navbar() {
               Admin
             </Link>
           )}
-          <Link
-            href="/contact"
+          <a
+            href="https://fishingbooker.com/embeds/book/2114018"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-gold px-5 py-2 rounded text-sm ml-2"
           >
             Book Now
-          </Link>
+          </a>
         </div>
 
         {/* Mobile hamburger */}
@@ -114,12 +116,14 @@ export default function Navbar() {
               Admin
             </Link>
           )}
-          <Link
-            href="/contact"
+          <a
+            href="https://fishingbooker.com/embeds/book/2114018"
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-gold block w-full mt-4 py-3 rounded text-sm text-center"
           >
             Book Now
-          </Link>
+          </a>
         </div>
       )}
     </nav>

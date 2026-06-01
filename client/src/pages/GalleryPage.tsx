@@ -116,9 +116,14 @@ export default function GalleryPage() {
           <p className="text-white/60 mb-8 max-w-xl mx-auto">
             Book your charter today and create your own fishing memories on the waters of Southwest Florida.
           </p>
-          <Link href="/contact" className="btn-gold px-10 py-4 rounded text-base inline-flex items-center gap-2">
+          <a
+            href="https://fishingbooker.com/embeds/book/2114018"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold px-10 py-4 rounded text-base inline-flex items-center gap-2"
+          >
             Book Your Charter <ArrowRight className="w-4 h-4" />
-          </Link>
+          </a>
         </div>
       </section>
 

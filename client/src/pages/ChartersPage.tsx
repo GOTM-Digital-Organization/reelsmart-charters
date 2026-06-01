@@ -123,9 +123,14 @@ export default function ChartersPage() {
                         <div className="text-white/40 text-xs mb-3">5th &amp; 6th person +$50 each</div>
                       )}
                       {pkg.maxPassengers === 1 && <div className="mb-3" />}
-                      <Link href="/contact" className="btn-gold w-full py-2.5 rounded text-sm block text-center">
+                      <a
+                        href="https://fishingbooker.com/embeds/book/2114018"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="btn-gold w-full py-2.5 rounded text-sm block text-center"
+                      >
                         Book This Trip
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
@@ -187,11 +192,16 @@ export default function ChartersPage() {
         <div className="container text-center">
           <h2 className="text-white text-3xl md:text-4xl mb-4">Ready to book your charter?</h2>
           <p className="text-white/60 mb-8 max-w-xl mx-auto">
-            Fill out the booking inquiry form and Captain Jon will get back to you quickly to confirm your trip details.
+            Book instantly through FishingBooker — secure, verified, and confirmed in minutes.
           </p>
-          <Link href="/contact" className="btn-gold px-10 py-4 rounded text-base inline-flex items-center gap-2">
+          <a
+            href="https://fishingbooker.com/embeds/book/2114018"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn-gold px-10 py-4 rounded text-base inline-flex items-center gap-2"
+          >
             Book Now <ArrowRight className="w-4 h-4" />
-          </Link>
+          </a>
         </div>
       </section>
 

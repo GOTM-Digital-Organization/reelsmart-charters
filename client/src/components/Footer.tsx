@@ -61,7 +61,7 @@ export default function Footer() {
                 { label: "Trips & Rates", href: "/charters" },
                 { label: "Photo Gallery", href: "/gallery" },
                 { label: "Testimonials", href: "/testimonials" },
-                { label: "Contact & Booking", href: "/contact" },
+                { label: "Book a Trip", href: "/book" },
               ].map((l) => (
                 <Link
                   key={l.label}

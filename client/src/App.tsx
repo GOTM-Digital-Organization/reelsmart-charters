@@ -9,7 +9,7 @@ import AboutPage from "./pages/AboutPage";
 import ChartersPage from "./pages/ChartersPage";
 import GalleryPage from "./pages/GalleryPage";
 import TestimonialsPage from "./pages/TestimonialsPage";
-import ContactPage from "./pages/ContactPage";
+import BookTripPage from "./pages/BookTripPage";
 import AdminDashboard from "./pages/AdminDashboard";
 import VenicePage from "./pages/VenicePage";
 import BradentonPage from "./pages/BradentonPage";
@@ -23,7 +23,8 @@ function Router() {
       <Route path="/charters" component={ChartersPage} />
       <Route path="/gallery" component={GalleryPage} />
       <Route path="/testimonials" component={TestimonialsPage} />
-      <Route path="/contact" component={ContactPage} />
+      <Route path="/book" component={BookTripPage} />
+      <Route path="/contact" component={BookTripPage} />
       <Route path="/admin" component={AdminDashboard} />
       <Route path="/fishing-charters-venice-fl" component={VenicePage} />
       <Route path="/fishing-charters-bradenton-fl" component={BradentonPage} />

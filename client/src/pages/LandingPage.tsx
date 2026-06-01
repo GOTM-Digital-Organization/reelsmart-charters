@@ -1,7 +1,5 @@
 import { useState } from "react";
-import { trpc } from "@/lib/trpc";
-import { toast } from "sonner";
-import { fireBookingConversion, fireCallConversion } from "@/lib/gtag";
+import { fireCallConversion } from "@/lib/gtag";
 import { Phone, Star, Shield, Fish, Clock, Users, CheckCircle, ChevronDown, Award } from "lucide-react";
 
 const PHOTOS = {
@@ -107,44 +105,7 @@ const SPECIES = [
 ];
 
 export default function LandingPage() {
-  const [form, setForm] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    date: "",
-    groupSize: "",
-    tripType: "",
-    message: "",
-  });
-  const [submitted, setSubmitted] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const submitInquiry = trpc.contact.submit.useMutation({
-    onSuccess: () => {
-      setSubmitted(true);
-      fireBookingConversion();
-      toast.success("Trip request sent! Captain Jon will be in touch shortly.");
-    },
-    onError: () => {
-      toast.error("Something went wrong. Please call us directly at (941) 702-5895.");
-    },
-  });
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.name || !form.phone) {
-      toast.error("Please provide your name and phone number.");
-      return;
-    }
-    submitInquiry.mutate({
-      name: form.name,
-      email: form.email,
-      phone: form.phone,
-      preferredDate: form.date,
-      groupSize: parseInt(form.groupSize) || 2,
-      message: `Trip Type: ${form.tripType}\n\n${form.message}`,
-    });
-  };
 
   const faqs = [
     {
@@ -264,134 +225,45 @@ export default function LandingPage() {
                 Call (941) 702-5895
               </a>
               <a
-                href="#book"
+                href="https://fishingbooker.com/embeds/book/2114018"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all text-lg border border-white/30 backdrop-blur-sm"
               >
-                Request a Trip Date
+                Book Online Now
               </a>
             </div>
 
             <p className="text-white/50 text-sm mt-4">
-              ✓ No deposit required to request · Captain confirms within 2 hours
+              ✓ Secure booking via FishingBooker · Verified charter · Instant confirmation
             </p>
           </div>
 
-          {/* Right: Booking Form */}
-          <div id="book" className="bg-white rounded-2xl shadow-2xl p-6 lg:p-8">
-            {submitted ? (
-              <div className="text-center py-8">
-                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <CheckCircle className="w-8 h-8 text-green-600" />
-                </div>
-                <h3 className="text-[#0A1628] font-bold text-xl mb-2">Trip Request Sent!</h3>
-                <p className="text-gray-600 mb-4">Captain Jon will call or text you within 2 hours to confirm your date.</p>
-                <a href="tel:+19417025895" onClick={fireCallConversion} className="inline-flex items-center gap-2 bg-[#C9A84C] text-[#0A1628] font-bold px-6 py-3 rounded-xl">
-                  <Phone className="w-4 h-4" /> Call Now: (941) 702-5895
-                </a>
+          {/* Right: FishingBooker Booking Widget */}
+          <div id="book" className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+            <div className="bg-[#0A1628] px-6 py-4 text-center">
+              <div className="flex items-center justify-center gap-2 mb-1">
+                {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-[#C9A84C] text-[#C9A84C]" />)}
+                <span className="text-white text-sm font-semibold ml-1">5.0 · 100+ Reviews on FishingBooker</span>
               </div>
-            ) : (
-              <>
-                <div className="text-center mb-6">
-                  <h3 className="text-[#0A1628] font-bold text-xl" style={{ fontFamily: "Georgia, serif" }}>
-                    Request Your Trip Date
-                  </h3>
-                  <p className="text-gray-500 text-sm mt-1">Captain Jon confirms within 2 hours</p>
-                  <div className="flex items-center justify-center gap-1 mt-2">
-                    {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-[#C9A84C] text-[#C9A84C]" />)}
-                    <span className="text-gray-500 text-sm ml-1">5.0 · 100+ reviews</span>
-                  </div>
-                </div>
-
-                <form onSubmit={handleSubmit} className="space-y-4">
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-xs font-semibold text-gray-600 mb-1">Full Name *</label>
-                      <input
-                        type="text"
-                        required
-                        placeholder="Your name"
-                        value={form.name}
-                        onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                        className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9A84C] focus:border-transparent"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold text-gray-600 mb-1">Phone Number *</label>
-                      <input
-                        type="tel"
-                        required
-                        placeholder="(941) 000-0000"
-                        value={form.phone}
-                        onChange={e => setForm(f => ({ ...f, phone: e.target.value }))}
-                        className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9A84C] focus:border-transparent"
-                      />
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Email</label>
-                    <input
-                      type="email"
-                      placeholder="your@email.com"
-                      value={form.email}
-                      onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9A84C] focus:border-transparent"
-                    />
-                  </div>
-
-                  <div className="grid grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-xs font-semibold text-gray-600 mb-1">Preferred Date</label>
-                      <input
-                        type="date"
-                        value={form.date}
-                        onChange={e => setForm(f => ({ ...f, date: e.target.value }))}
-                        className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9A84C] focus:border-transparent"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-xs font-semibold text-gray-600 mb-1">Group Size</label>
-                      <select
-                        value={form.groupSize}
-                        onChange={e => setForm(f => ({ ...f, groupSize: e.target.value }))}
-                        className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9A84C] focus:border-transparent"
-                      >
-                        <option value="">Select</option>
-                        {[1,2,3,4,5,6].map(n => <option key={n} value={n}>{n} {n === 1 ? "person" : "people"}</option>)}
-                      </select>
-                    </div>
-                  </div>
-
-                  <div>
-                    <label className="block text-xs font-semibold text-gray-600 mb-1">Trip Type</label>
-                    <select
-                      value={form.tripType}
-                      onChange={e => setForm(f => ({ ...f, tripType: e.target.value }))}
-                      className="w-full border border-gray-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-[#C9A84C] focus:border-transparent"
-                    >
-                      <option value="">Which trip interests you?</option>
-                      <option value="Half-Day Inshore - $650">Half-Day Inshore — $650</option>
-                      <option value="Half-Day Nearshore - $750">Half-Day Nearshore — $750</option>
-                      <option value="Tarpon Trip - $975">Tarpon Trip — $975</option>
-                      <option value="Full-Day Combo - $1,400">Full-Day Combo — $1,400</option>
-                      <option value="Not sure yet">Not sure yet — help me choose</option>
-                    </select>
-                  </div>
-
-                  <button
-                    type="submit"
-                    disabled={submitInquiry.isPending}
-                    className="w-full bg-[#C9A84C] hover:bg-[#b8933d] disabled:opacity-60 text-[#0A1628] font-bold py-4 rounded-xl transition-all text-base shadow-md hover:shadow-lg active:scale-95"
-                  >
-                    {submitInquiry.isPending ? "Sending..." : "Send My Trip Request →"}
-                  </button>
-
-                  <p className="text-center text-gray-400 text-xs">
-                    Or call directly: <a href="tel:+19417025895" onClick={fireCallConversion} className="text-[#0A1628] font-semibold hover:underline">(941) 702-5895</a>
-                  </p>
-                </form>
-              </>
-            )}
+              <p className="text-white/60 text-xs">Verified charter · Secure booking · Instant confirmation</p>
+            </div>
+            <div className="p-4">
+              <iframe
+                src="https://fishingbooker.com/embeds/book/2114018"
+                width="100%"
+                height="520"
+                frameBorder="0"
+                scrolling="no"
+                title="Book a Fishing Charter with Reel Smart Charters"
+                style={{ borderRadius: "8px", minHeight: "500px" }}
+              />
+            </div>
+            <div className="px-6 pb-4 text-center">
+              <p className="text-gray-400 text-xs">
+                Prefer to call? <a href="tel:+19417025895" onClick={fireCallConversion} className="text-[#0A1628] font-semibold hover:underline">(941) 702-5895</a>
+              </p>
+            </div>
           </div>
         </div>
 
@@ -454,7 +326,9 @@ export default function LandingPage() {
                 </div>
                 <div className="p-4 pt-0">
                   <a
-                    href="#book"
+                    href="https://fishingbooker.com/embeds/book/2114018"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="block text-center bg-[#0A1628] hover:bg-[#1B2F4A] text-white font-semibold py-3 rounded-xl transition-colors text-sm"
                   >
                     Book This Trip
@@ -658,10 +532,12 @@ export default function LandingPage() {
               Call (941) 702-5895
             </a>
             <a
-              href="#book"
+              href="https://fishingbooker.com/embeds/book/2114018"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 text-white font-semibold px-8 py-4 rounded-xl transition-all text-lg border border-white/30"
             >
-              Request a Trip Date Online
+              Book Online via FishingBooker
             </a>
           </div>
           <p className="text-white/40 text-sm mt-6">

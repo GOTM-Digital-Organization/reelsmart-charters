@@ -132,9 +132,14 @@ export default function TestimonialsPage() {
             >
               Leave a Google Review <ArrowRight className="w-4 h-4" />
             </a>
-            <Link href="/contact" className="btn-outline-navy px-8 py-3 rounded text-sm">
+            <a
+              href="https://fishingbooker.com/embeds/book/2114018"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-outline-navy px-8 py-3 rounded text-sm"
+            >
               Book Your Next Trip
-            </Link>
+            </a>
           </div>
         </div>
       </section>

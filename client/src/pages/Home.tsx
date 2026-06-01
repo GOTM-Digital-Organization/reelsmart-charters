@@ -76,9 +76,14 @@ function Hero() {
             Premium inshore and nearshore fishing charters in the back bays, mangroves, and coastal waters of Southwest Florida. Captain Jon puts you on the fish — you bring the stories home.
           </p>
           <div className="flex flex-wrap gap-4">
-            <Link href="/contact" className="btn-gold px-8 py-4 rounded text-base">
+            <a
+              href="https://fishingbooker.com/embeds/book/2114018"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold px-8 py-4 rounded text-base"
+            >
               Book Your Trip
-            </Link>
+            </a>
             <Link href="/charters" className="btn-outline-gold px-8 py-4 rounded text-base">
               View Trips
             </Link>
@@ -214,6 +219,14 @@ function FeaturedCharters() {
                     {pkg.maxPassengers !== 1 && (
                       <div className="text-white/40 text-xs">5th &amp; 6th person +$50 each</div>
                     )}
+                    <a
+                      href="https://fishingbooker.com/embeds/book/2114018"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn-gold w-full py-2.5 rounded text-sm block text-center mt-3"
+                    >
+                      Book This Trip
+                    </a>
                   </div>
                 </div>
               </div>
@@ -326,9 +339,15 @@ function CTABanner() {
         <p className="text-white/70 text-lg mb-8 max-w-xl mx-auto">
           All charters are 100% private. Your group, your pace, your adventure.
         </p>
-        <Link href="/contact" className="btn-gold px-10 py-4 rounded text-base inline-block">
+        <a
+          href="https://fishingbooker.com/embeds/book/2114018"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-gold px-10 py-4 rounded text-base inline-block"
+        >
           Book Your Charter Today
-        </Link>
+        </a>
+        <p className="text-white/40 text-xs mt-4">Secure booking powered by FishingBooker · Verified charter · 5.0 ★ · 100+ reviews</p>
       </div>
     </section>
   );

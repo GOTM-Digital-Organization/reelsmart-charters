@@ -44,9 +44,9 @@ export default function BradentonPage() {
               Explore the legendary fishing grounds of Tampa Bay, the Manatee River, and the nearshore Gulf with USCG licensed Captain Jon. Private charters for all skill levels — all gear, bait, and license included.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Link href="/contact" className="btn-gold px-8 py-4 rounded text-base">
+              <a href="https://fishingbooker.com/embeds/book/2114018" target="_blank" rel="noopener noreferrer" className="btn-gold px-8 py-4 rounded text-base">
                 Book a Bradenton Charter
-              </Link>
+              </a>
               <a href="tel:+19417025895" className="btn-outline-gold px-8 py-4 rounded text-base flex items-center gap-2">
                 <Phone className="w-4 h-4" /> (941) 702-5895
               </a>
@@ -158,9 +158,9 @@ export default function BradentonPage() {
                 <div className="text-white/40 text-xs mb-2">base price · 5th &amp; 6th person +$50 each</div>
                 <div className="text-gold font-heading text-sm mb-3">{duration} Charter · {group} · up to 6 total</div>
                 <p className="text-white/60 text-sm mb-5">{desc}</p>
-                <Link href="/contact" className="btn-gold w-full text-center py-2.5 rounded text-sm block">
+                <a href="https://fishingbooker.com/embeds/book/2114018" target="_blank" rel="noopener noreferrer" className="btn-gold w-full text-center py-2.5 rounded text-sm block">
                   Book This Trip
-                </Link>
+                </a>
               </div>
             ))}
           </div>
@@ -219,9 +219,9 @@ export default function BradentonPage() {
             >
               Get Directions
             </a>
-            <Link href="/contact" className="btn-gold px-6 py-3 rounded text-sm">
+            <a href="https://fishingbooker.com/embeds/book/2114018" target="_blank" rel="noopener noreferrer" className="btn-gold px-6 py-3 rounded text-sm">
               Book Your Bradenton Trip
-            </Link>
+            </a>
           </div>
         </div>
       </section>
@@ -234,9 +234,9 @@ export default function BradentonPage() {
           </h2>
           <p className="text-white/60 mb-8">Book your private Bradenton fishing charter today. Captain Jon will put you on the fish.</p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="btn-gold px-10 py-4 rounded text-base">
+            <a href="https://fishingbooker.com/embeds/book/2114018" target="_blank" rel="noopener noreferrer" className="btn-gold px-10 py-4 rounded text-base">
               Book Now
-            </Link>
+            </a>
             <a href="tel:+19417025895" className="btn-outline-gold px-10 py-4 rounded text-base flex items-center gap-2">
               <Phone className="w-4 h-4" /> Call (941) 702-5895
             </a>

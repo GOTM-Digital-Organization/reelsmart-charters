@@ -89,9 +89,14 @@ export default function AboutPage() {
                 ))}
               </div>
 
-              <Link href="/contact" className="btn-gold px-8 py-3 rounded text-sm inline-flex items-center gap-2">
+              <a
+                href="https://fishingbooker.com/embeds/book/2114018"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-gold px-8 py-3 rounded text-sm inline-flex items-center gap-2"
+              >
                 Book a Trip with Captain Jon <ArrowRight className="w-4 h-4" />
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -195,10 +200,15 @@ export default function AboutPage() {
         <div className="container text-center">
           <h2 className="text-navy text-3xl md:text-4xl mb-4">Ready to fish with Captain Jon?</h2>
           <p className="text-gray-600 mb-8 max-w-xl mx-auto">
-            All charters are 100% private. Fill out the booking form and Captain Jon will be in touch quickly to confirm your trip.
+            All charters are 100% private. Book instantly through FishingBooker — secure, verified, and confirmed in minutes.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
-            <Link href="/contact" className="btn-gold px-10 py-4 rounded text-base">Book Your Charter</Link>
+            <a
+              href="https://fishingbooker.com/embeds/book/2114018"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-gold px-10 py-4 rounded text-base"
+            >Book Your Charter</a>
             <Link href="/charters" className="btn-outline-navy px-10 py-4 rounded text-base">View Pricing</Link>
           </div>
         </div>
