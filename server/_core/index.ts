@@ -48,20 +48,20 @@ async function startServer() {
   app.get("/robots.txt", (_req, res) => {
     res.type("text/plain");
     res.send(
-      `User-agent: *\nAllow: /\n\nSitemap: https://reelsmartcharters.com/sitemap.xml`
+      `User-agent: *\nAllow: /\n\nSitemap: https://www.reelsmartcharters.com/sitemap.xml`
     );
   });
 
   // SEO: sitemap.xml
   app.get("/sitemap.xml", (_req, res) => {
-    const BASE = "https://reelsmartcharters.com";
+    const BASE = "https://www.reelsmartcharters.com";
     const pages = [
       { loc: "/", priority: "1.0", changefreq: "weekly" },
       { loc: "/about", priority: "0.8", changefreq: "monthly" },
       { loc: "/charters", priority: "0.9", changefreq: "weekly" },
       { loc: "/gallery", priority: "0.7", changefreq: "monthly" },
       { loc: "/testimonials", priority: "0.7", changefreq: "monthly" },
-      { loc: "/contact", priority: "0.9", changefreq: "monthly" },
+      { loc: "/book", priority: "0.9", changefreq: "monthly" },
       { loc: "/fishing-charters-venice-fl", priority: "0.9", changefreq: "monthly" },
       { loc: '/fishing-charters-bradenton-fl', priority: '0.9', changefreq: 'monthly' },
       { loc: '/sarasota-fishing-charters-lp', priority: '0.8', changefreq: 'weekly' },

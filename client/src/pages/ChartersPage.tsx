@@ -16,16 +16,28 @@ const CHARTERS_SCHEMA = {
     "@type": "OfferCatalog",
     name: "Fishing Charter Packages",
     itemListElement: [
-      {
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: "Half Day Inshore Charter",
-          description: "4-hour inshore fishing charter in Sarasota Bay",
-        },
-      },
+      { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "650", "priceCurrency": "USD" }, itemOffered: { "@type": "Service", name: "Half-Day Bay Inshore Charter", description: "4-hour inshore fishing charter in Sarasota Bay targeting snook, redfish, and trout. Up to 4 people." } },
+      { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "750", "priceCurrency": "USD" }, itemOffered: { "@type": "Service", name: "Half-Day Gulf Nearshore Charter", description: "4-hour nearshore fishing charter targeting snapper, grouper, and hogfish. Up to 6 people." } },
+      { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "875", "priceCurrency": "USD" }, itemOffered: { "@type": "Service", name: "3/4-Day Bay Inshore Charter", description: "6-hour inshore fishing charter in Sarasota Bay. Up to 4 people." } },
+      { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "975", "priceCurrency": "USD" }, itemOffered: { "@type": "Service", name: "3/4-Day Gulf Nearshore Charter", description: "6-hour nearshore Gulf charter targeting snapper, grouper, and cobia. Up to 6 people." } },
+      { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "1400", "priceCurrency": "USD" }, itemOffered: { "@type": "Service", name: "Full-Day Bay + Gulf Combo Charter", description: "8-hour full-day charter combining inshore and nearshore fishing. Up to 6 people." } },
+      { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "475", "priceCurrency": "USD" }, itemOffered: { "@type": "Service", name: "Single Angler Inshore Charter", description: "4-hour solo inshore fishing charter in Sarasota Bay. 1 person." } },
+      { "@type": "Offer", "priceSpecification": { "@type": "PriceSpecification", "price": "450", "priceCurrency": "USD" }, itemOffered: { "@type": "Service", name: "Sunset Cruise Charter", description: "3-hour evening Gulf fishing cruise at sunset. Up to 6 people." } },
     ],
   },
+};
+
+const FAQ_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "What should I bring on the charter?", "acceptedAnswer": { "@type": "Answer", "text": "Sunscreen, sunglasses, a hat, comfortable non-marking shoes, and any food or drinks you'd like. We provide water, but you're welcome to bring snacks, lunch, or beverages." } },
+    { "@type": "Question", "name": "Is the fishing license included?", "acceptedAnswer": { "@type": "Answer", "text": "Yes \u2014 your Florida saltwater fishing license is included in the charter price for all passengers." } },
+    { "@type": "Question", "name": "What if the weather is bad?", "acceptedAnswer": { "@type": "Answer", "text": "Safety is the top priority. If conditions are unsafe, we'll reschedule your trip at no charge. Light rain or wind is usually fine \u2014 Captain Jon will make the call." } },
+    { "@type": "Question", "name": "Can I keep the fish I catch?", "acceptedAnswer": { "@type": "Answer", "text": "Absolutely. We follow all Florida FWC regulations. Captain Jon will clean and bag your legal catch at the end of the trip." } },
+    { "@type": "Question", "name": "How far in advance should I book?", "acceptedAnswer": { "@type": "Answer", "text": "Weekends and holidays book fast \u2014 we recommend booking at least 2\u20133 weeks in advance. Weekday availability is usually more flexible." } },
+    { "@type": "Question", "name": "Is the charter suitable for kids?", "acceptedAnswer": { "@type": "Answer", "text": "Yes! Captain Jon loves introducing kids to fishing. Trips are family-friendly and can be tailored to younger anglers." } },
+  ],
 };
 
 export default function ChartersPage() {
@@ -34,10 +46,10 @@ export default function ChartersPage() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Fishing Charter Packages & Pricing — Reel Smart Charters Sarasota FL"
-        description="View all fishing charter packages and pricing for Reel Smart Charters in Sarasota, FL. Half-day, full-day, nearshore, sunset trips. All gear, bait & license included."
+        title="Sarasota Fishing Charter Packages & Pricing | Reel Smart Charters"
+        description="Browse all Sarasota fishing charter packages from Reel Smart Charters. Half-day inshore from $650, nearshore Gulf trips, full-day combos, sunset cruises & single angler. All gear, bait & FL fishing license included."
         canonical="/charters"
-        jsonLd={CHARTERS_SCHEMA}
+        jsonLd={[CHARTERS_SCHEMA, FAQ_SCHEMA]}
       />
       <Navbar />
 
@@ -48,10 +60,10 @@ export default function ChartersPage() {
         <div className="container relative z-10 text-center">
           <p className="section-label mb-4">Trips & Rates</p>
           <h1 className="text-white text-4xl md:text-6xl mb-4 leading-tight" style={{ fontFamily: "var(--font-display)", fontWeight: 800 }}>
-            Charter Packages
+            Sarasota Fishing Charter Packages
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
-            Eight trip options — bay, Gulf, sunset, single angler, and more. Everything included.
+            Private inshore and nearshore fishing charters in Sarasota, FL — bay, Gulf, sunset, single angler, and full-day combos. All gear, bait, tackle, and Florida fishing license included.
           </p>
         </div>
       </section>

@@ -2,7 +2,7 @@ import { fireBookingConversion } from "@/lib/gtag";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
-import { Star, Shield, Fish, Anchor, Users, ChevronDown, ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { Star, Shield, Fish, Anchor, Users, ChevronDown, ChevronLeft, ChevronRight, ArrowRight, MapPin, Phone, ChevronUp } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead, { LOCAL_BUSINESS_SCHEMA } from "@/components/SEOHead";
@@ -330,6 +330,125 @@ function TestimonialsPreview() {
   );
 }
 
+// ── Service Area ─────────────────────────────────────────────────────────────
+function ServiceArea() {
+  const areas = [
+    {
+      city: "Sarasota",
+      desc: "Our home port. We fish Sarasota Bay, the Intracoastal Waterway, Roberts Bay, and the nearshore Gulf reefs just off Siesta Key and Lido Key.",
+      link: "/charters",
+    },
+    {
+      city: "Bradenton",
+      desc: "Minutes north of Sarasota, we access Tampa Bay, the Manatee River, and the legendary grass flats that hold some of the biggest redfish and snook in Southwest Florida.",
+      link: "/fishing-charters-bradenton-fl",
+    },
+    {
+      city: "Venice",
+      desc: "South of Sarasota, we fish the Venice Inlet, the Myakka River backwaters, and the nearshore reefs and ledges that hold snapper, grouper, and cobia.",
+      link: "/fishing-charters-venice-fl",
+    },
+  ];
+  return (
+    <section className="py-20 bg-white">
+      <div className="container">
+        <div className="text-center mb-12">
+          <p className="section-label mb-3">Service Area</p>
+          <h2 className="text-navy text-3xl md:text-4xl mb-4" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>
+            We Fish the Best of Southwest Florida
+          </h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            Reel Smart Charters is a private fishing charter service based in Sarasota, FL, serving Sarasota, Bradenton, Venice, Siesta Key, Longboat Key, and surrounding Gulf Coast communities. All trips depart from 1059 N Tamiami Trl, Sarasota.
+          </p>
+        </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {areas.map(({ city, desc, link }) => (
+            <div key={city} className="rounded-xl border border-gray-100 shadow-sm p-6 hover:shadow-md transition-shadow">
+              <div className="flex items-center gap-2 mb-3">
+                <MapPin className="w-5 h-5 text-gold" />
+                <h3 className="text-navy font-heading text-lg font-semibold">{city}, FL</h3>
+              </div>
+              <p className="text-gray-600 text-sm leading-relaxed mb-4">{desc}</p>
+              <Link href={link} className="text-gold hover:text-navy transition-colors text-sm font-heading flex items-center gap-1">
+                {city === "Sarasota" ? "View All Charters" : `${city} Charters`} <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+// ── FAQ ───────────────────────────────────────────────────────────────────────
+const HOME_FAQS = [
+  {
+    q: "What is the best time of year to fish in Sarasota?",
+    a: "Sarasota offers excellent fishing year-round. Spring (March–May) is prime for tarpon and cobia. Summer brings snook, redfish, and nearshore action. Fall is fantastic for trout and redfish on the flats. Winter is excellent for sheepshead, snapper, and grouper on nearshore structure.",
+  },
+  {
+    q: "Are your charters good for kids and beginners?",
+    a: "Absolutely. Captain Jon specializes in making fishing fun and accessible for all ages and skill levels. All gear, bait, and tackle are provided — no experience is needed. The Half-Day Bay charter is especially popular with families.",
+  },
+  {
+    q: "What fish can we catch near Sarasota?",
+    a: "Inshore targets include snook, redfish, spotted seatrout, and tarpon. Nearshore trips add snapper, grouper, hogfish, sheepshead, cobia, and mackerel. The specific species available depends on the season and water conditions.",
+  },
+  {
+    q: "Is Captain Jon USCG licensed and insured?",
+    a: "Yes. Captain Jon holds a current USCG Captain's License and carries full liability insurance. Your Florida fishing license is also included in the charter price — you don't need to purchase one separately.",
+  },
+  {
+    q: "How much does a fishing charter in Sarasota cost?",
+    a: "Prices start at $475 for a single-angler half-day trip and range up to $1,400 for a full-day offshore combo. Inshore half-day charters for groups start at $650 for up to 4 people. The 5th and 6th person on inshore trips add $50 each. All prices include gear, bait, tackle, ice, and water.",
+  },
+  {
+    q: "How soon can I book a charter?",
+    a: "You can check availability and book instantly through FishingBooker on our Book Trip page. For same-week trips or custom requests, call Captain Jon directly at (941) 702-5895.",
+  },
+];
+
+function HomeFAQ() {
+  const [open, setOpen] = useState<number | null>(null);
+  return (
+    <section className="py-20 bg-off-white">
+      <div className="container max-w-3xl">
+        <div className="text-center mb-12">
+          <p className="section-label mb-3">Common Questions</p>
+          <h2 className="text-navy text-3xl md:text-4xl mb-4" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>
+            Frequently Asked Questions
+          </h2>
+          <p className="text-gray-600">Everything you need to know before booking your Sarasota fishing charter.</p>
+        </div>
+        <div className="space-y-3">
+          {HOME_FAQS.map((faq, i) => (
+            <div key={i} className="bg-white rounded-xl border border-gray-100 shadow-sm overflow-hidden">
+              <button
+                className="w-full text-left px-6 py-4 flex items-center justify-between gap-4 hover:bg-gray-50 transition-colors"
+                onClick={() => setOpen(open === i ? null : i)}
+                aria-expanded={open === i}
+              >
+                <span className="text-navy font-heading font-semibold text-sm md:text-base">{faq.q}</span>
+                {open === i ? <ChevronUp className="w-4 h-4 text-gold flex-shrink-0" /> : <ChevronDown className="w-4 h-4 text-gold flex-shrink-0" />}
+              </button>
+              {open === i && (
+                <div className="px-6 pb-5 text-gray-600 text-sm leading-relaxed border-t border-gray-100 pt-3">
+                  {faq.a}
+                </div>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="text-center mt-8">
+          <Link href="/charters" className="text-gold hover:text-navy transition-colors font-heading text-sm flex items-center gap-2 justify-center">
+            View All Charter Packages & Pricing <ArrowRight className="w-4 h-4" />
+          </Link>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ── CTA Banner ────────────────────────────────────────────────────────────────
 function CTABanner() {
   return (
@@ -364,10 +483,49 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Reel Smart Charters — Fishing Charters in Sarasota, FL"
-        description="Premium inshore and nearshore fishing charters in Sarasota, Bradenton & Venice, Florida. USCG licensed Captain Jon. All gear, bait & license included. Book today!"
+        title="Sarasota Fishing Charters — Reel Smart Charters | USCG Licensed Captain Jon"
+        description="Reel Smart Charters offers private inshore and nearshore fishing charters in Sarasota, Bradenton, and Venice, FL. USCG licensed Captain Jon. All gear, bait & license included. Book online today!"
         canonical="/"
-        jsonLd={LOCAL_BUSINESS_SCHEMA}
+        jsonLd={[
+          {
+          ...LOCAL_BUSINESS_SCHEMA,
+          "@type": ["LocalBusiness", "TouristAttraction"],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Fishing Charter Packages",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-Day Bay Inshore Charter", "description": "4-hour inshore fishing charter on Sarasota Bay targeting snook, redfish, and trout. Up to 4 people." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Half-Day Gulf Nearshore Charter", "description": "4-hour nearshore fishing charter on the Gulf of Mexico targeting snapper, grouper, and cobia. Up to 6 people." } },
+              { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Full-Day Combo Charter", "description": "8-hour full-day fishing charter combining inshore and nearshore fishing. Up to 6 people." } },
+            ],
+          },
+          "knowsAbout": ["Inshore Fishing", "Nearshore Fishing", "Snook Fishing", "Redfish Fishing", "Tarpon Fishing", "Sarasota Bay", "Gulf of Mexico"],
+          "areaServed": [
+            { "@type": "City", "name": "Sarasota", "sameAs": "https://en.wikipedia.org/wiki/Sarasota,_Florida" },
+            { "@type": "City", "name": "Bradenton", "sameAs": "https://en.wikipedia.org/wiki/Bradenton,_Florida" },
+            { "@type": "City", "name": "Venice", "sameAs": "https://en.wikipedia.org/wiki/Venice,_Florida" },
+            { "@type": "Place", "name": "Siesta Key" },
+            { "@type": "Place", "name": "Longboat Key" },
+          ],
+          },
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Reel Smart Charters",
+            "url": "https://www.reelsmartcharters.com",
+            "description": "Private inshore and nearshore fishing charters in Sarasota, Bradenton, and Venice, Florida. USCG licensed Captain Jon Smart.",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://www.reelsmartcharters.com/charters",
+              "query-input": "required name=search_term_string",
+            },
+            "publisher": {
+              "@type": "LocalBusiness",
+              "name": "Reel Smart Charters",
+              "url": "https://www.reelsmartcharters.com",
+            },
+          },
+        ]}
       />
       <Navbar />
       <Hero />
@@ -376,6 +534,8 @@ export default function Home() {
       <FeaturedCharters />
       <GalleryPreview />
       <TestimonialsPreview />
+      <ServiceArea />
+      <HomeFAQ />
       <CTABanner />
       <Footer />
     </div>

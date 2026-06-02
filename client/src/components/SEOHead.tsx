@@ -5,11 +5,11 @@ interface SEOHeadProps {
   description: string;
   canonical: string;
   ogImage?: string;
-  jsonLd?: object;
+  jsonLd?: object | object[];
 }
 
 const SITE_NAME = "Reel Smart Charters";
-const BASE_URL = "https://reelsmartcharters.com";
+const BASE_URL = "https://www.reelsmartcharters.com";
 const DEFAULT_OG_IMAGE = `${BASE_URL}/manus-storage/IMG_8048_c31d63c6.jpeg`;
 
 export default function SEOHead({
@@ -63,15 +63,18 @@ export default function SEOHead({
     }
     canonicalEl.href = canonicalUrl;
 
-    // JSON-LD structured data
-    const existingJsonLd = document.querySelector('script[data-rsc="jsonld"]');
-    if (existingJsonLd) existingJsonLd.remove();
+    // JSON-LD structured data — support single object or array of objects
+    document.querySelectorAll('script[data-rsc="jsonld"]').forEach(el => el.remove());
     if (jsonLd) {
-      const script = document.createElement("script");
-      script.type = "application/ld+json";
-      script.setAttribute("data-rsc", "jsonld");
-      script.textContent = JSON.stringify(jsonLd);
-      document.head.appendChild(script);
+      const schemas = Array.isArray(jsonLd) ? jsonLd : [jsonLd];
+      schemas.forEach((schema, i) => {
+        const script = document.createElement("script");
+        script.type = "application/ld+json";
+        script.setAttribute("data-rsc", "jsonld");
+        script.setAttribute("data-rsc-index", String(i));
+        script.textContent = JSON.stringify(schema);
+        document.head.appendChild(script);
+      });
     }
   }, [fullTitle, description, canonicalUrl, ogImage, jsonLd]);
 

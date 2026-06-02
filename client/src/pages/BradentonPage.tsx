@@ -17,7 +17,16 @@ const BRADENTON_SCHEMA = {
   name: "Reel Smart Charters — Bradenton Fishing Charters",
   description:
     "Fishing charters in Bradenton, FL. Inshore and nearshore trips on Tampa Bay and the Manatee River targeting snook, redfish, tarpon, and more. USCG licensed Captain Jon. All gear included.",
-  url: "https://reelsmartcharters.com/fishing-charters-bradenton-fl",
+  url: "https://www.reelsmartcharters.com/fishing-charters-bradenton-fl",
+};
+
+const BRADENTON_BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.reelsmartcharters.com" },
+    { "@type": "ListItem", "position": 2, "name": "Fishing Charters Bradenton FL", "item": "https://www.reelsmartcharters.com/fishing-charters-bradenton-fl" },
+  ],
 };
 
 export default function BradentonPage() {
@@ -27,7 +36,7 @@ export default function BradentonPage() {
         title="Fishing Charters Bradenton FL — Tampa Bay Inshore & Nearshore | Reel Smart Charters"
         description="Top-rated fishing charters in Bradenton, FL. Fish Tampa Bay, the Manatee River, and nearshore Gulf waters for snook, redfish, tarpon, and more. Private charters with USCG licensed Captain Jon."
         canonical="/fishing-charters-bradenton-fl"
-        jsonLd={BRADENTON_SCHEMA}
+        jsonLd={[BRADENTON_SCHEMA, BRADENTON_BREADCRUMB_SCHEMA]}
       />
       <Navbar />
 

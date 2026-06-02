@@ -17,7 +17,16 @@ const VENICE_SCHEMA = {
   name: "Reel Smart Charters — Venice Fishing Charters",
   description:
     "Fishing charters in Venice, FL. Inshore and nearshore trips targeting snook, redfish, tarpon, and more. USCG licensed Captain Jon. All gear included.",
-  url: "https://reelsmartcharters.com/fishing-charters-venice-fl",
+  url: "https://www.reelsmartcharters.com/fishing-charters-venice-fl",
+};
+
+const VENICE_BREADCRUMB_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.reelsmartcharters.com" },
+    { "@type": "ListItem", "position": 2, "name": "Fishing Charters Venice FL", "item": "https://www.reelsmartcharters.com/fishing-charters-venice-fl" },
+  ],
 };
 
 export default function VenicePage() {
@@ -27,7 +36,7 @@ export default function VenicePage() {
         title="Fishing Charters Venice FL — Inshore & Nearshore | Reel Smart Charters"
         description="Top-rated fishing charters in Venice, FL. Target snook, redfish, tarpon, and more on private inshore and nearshore trips with USCG licensed Captain Jon. All gear, bait & license included."
         canonical="/fishing-charters-venice-fl"
-        jsonLd={VENICE_SCHEMA}
+        jsonLd={[VENICE_SCHEMA, VENICE_BREADCRUMB_SCHEMA]}
       />
       <Navbar />
 

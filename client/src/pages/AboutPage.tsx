@@ -21,14 +21,27 @@ const ABOUT_SCHEMA = {
     "Meet Captain Jon of Reel Smart Charters — USCG licensed fishing guide with years of experience on the inshore and nearshore waters of Sarasota, Bradenton, and Venice, Florida.",
 };
 
+const PERSON_SCHEMA = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Captain Jon Smart",
+  "jobTitle": "USCG Licensed Fishing Charter Captain",
+  "description": "Captain Jon Smart is a USCG licensed charter captain with over 25 years of experience fishing the inshore and nearshore waters of Sarasota, Bradenton, and Venice, Florida. He specializes in snook, redfish, tarpon, snapper, and grouper aboard Reel Smart Charters.",
+  "worksFor": { "@type": "LocalBusiness", "name": "Reel Smart Charters", "url": "https://www.reelsmartcharters.com" },
+  "knowsAbout": ["Inshore Fishing", "Nearshore Fishing", "Snook Fishing", "Redfish Fishing", "Tarpon Fishing", "Sarasota Bay", "Gulf of Mexico", "Florida Fishing Regulations", "Light Tackle Fishing", "Fly Fishing"],
+  "hasCredential": { "@type": "EducationalOccupationalCredential", "credentialCategory": "license", "name": "USCG Captain's License (OUPV/Six-Pack)", "recognizedBy": { "@type": "Organization", "name": "United States Coast Guard" } },
+  "address": { "@type": "PostalAddress", "addressLocality": "Sarasota", "addressRegion": "FL", "addressCountry": "US" },
+  "url": "https://www.reelsmartcharters.com/about",
+};
+
 export default function AboutPage() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="About Captain Jon — Reel Smart Charters Sarasota FL"
-        description="Meet Captain Jon, your USCG licensed fishing guide for Reel Smart Charters. Years of experience on the inshore and nearshore waters of Sarasota, Bradenton, and Venice, Florida."
+        title="About Captain Jon Smart | USCG Licensed Sarasota Fishing Charter Captain"
+        description="Meet Captain Jon Smart, USCG licensed charter captain and owner of Reel Smart Charters in Sarasota, FL. 25+ years fishing Sarasota Bay, the Gulf of Mexico, and Southwest Florida waters. Private charters for all skill levels."
         canonical="/about"
-        jsonLd={ABOUT_SCHEMA}
+        jsonLd={[ABOUT_SCHEMA, PERSON_SCHEMA]}
       />
       <Navbar />
 
@@ -39,10 +52,10 @@ export default function AboutPage() {
         <div className="container relative z-10 text-center">
           <p className="section-label mb-4">Your Captain</p>
           <h1 className="text-white text-4xl md:text-6xl mb-4 leading-tight" style={{ fontFamily: "var(--font-display)", fontWeight: 800 }}>
-            About Reel Smart Charters
+            About Captain Jon Smart
           </h1>
           <p className="text-white/70 text-lg max-w-2xl mx-auto">
-            Local knowledge, USCG credentials, and a genuine passion for putting you on fish.
+            USCG licensed charter captain. 25+ years on Sarasota Bay and the Gulf of Mexico. Owner and operator of Reel Smart Charters.
           </p>
         </div>
       </section>
