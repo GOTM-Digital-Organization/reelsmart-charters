@@ -145,19 +145,18 @@ export default function VenicePage() {
             <h2 className="text-3xl md:text-4xl mb-4" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>
               Venice Fishing Charter Packages
             </h2>
-            <p className="text-white/60 max-w-2xl mx-auto">All charters depart from Sarasota (1059 N Tamiami Trl) and cover the Venice area waters. Base price is for up to 4 people — 5th &amp; 6th person add $50 each. 100% private.</p>
+            <p className="text-white/60 max-w-2xl mx-auto">All charters depart from Sarasota (1059 N Tamiami Trl) and cover the Venice area waters. All prices are for up to 6 people. 100% private.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
             {[
-              { duration: "4-Hour", price: "$500", group: "Up to 4 people", desc: "Perfect intro trip. Inshore flats and backwater fishing targeting snook, redfish, and trout." },
-              { duration: "6-Hour", price: "$700", group: "Up to 4 people", desc: "Our most popular trip. More water covered, more species targeted — inshore and nearshore.", popular: true },
-              { duration: "8-Hour", price: "$900", group: "Up to 4 people", desc: "Full-day adventure. Nearshore reefs, offshore structure, and everything in between." },
+              { duration: "4-Hour", price: "$500", group: "Up to 6 people", desc: "Perfect intro trip. Inshore flats and backwater fishing targeting snook, redfish, and trout." },
+              { duration: "6-Hour", price: "$700", group: "Up to 6 people", desc: "Our most popular trip. More water covered, more species targeted — inshore and nearshore.", popular: true },
+              { duration: "8-Hour", price: "$900", group: "Up to 6 people", desc: "Full-day adventure. Nearshore reefs, offshore structure, and everything in between." },
             ].map(({ duration, price, group, desc, popular }) => (
               <div key={duration} className={`rounded-xl p-6 border ${popular ? "border-gold bg-white/10" : "border-white/10 bg-white/5"}`}>
                 {popular && <div className="text-gold text-xs font-heading tracking-widest uppercase mb-3">Most Popular</div>}
                 <div className="text-3xl font-bold mb-0.5">{price}</div>
-                <div className="text-white/40 text-xs mb-2">base price · 5th &amp; 6th person +$50 each</div>
-                <div className="text-gold font-heading text-sm mb-3">{duration} Charter · {group} · up to 6 total</div>
+                <div className="text-gold font-heading text-sm mb-3">{duration} Charter · {group}</div>
                 <p className="text-white/60 text-sm mb-5">{desc}</p>
                 <a href="https://fishingbooker.com/embeds/book/2114018" onClick={fireBookingConversion} target="_blank" rel="noopener noreferrer" className="btn-gold w-full text-center py-2.5 rounded text-sm block">
                   Book This Trip
@@ -165,7 +164,7 @@ export default function VenicePage() {
               </div>
             ))}
           </div>
-          <p className="text-center text-white/40 text-sm mt-6">All gear, bait, tackle &amp; fishing license included. Base price for up to 4 people — 5th &amp; 6th person add $50 each.</p>
+          <p className="text-center text-white/40 text-sm mt-6">All gear, bait, tackle &amp; fishing license included. All trips are 100% private — up to 6 people.</p>
         </div>
       </section>
 

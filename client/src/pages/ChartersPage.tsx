@@ -111,19 +111,19 @@ export default function ChartersPage() {
                     <div className="border-t border-white/10 pt-4 mt-auto">
                       <div className="flex items-end justify-between mb-1">
                         <div>
-                          {pkg.maxPassengers !== 1 && (
+                          {pkg.maxPassengers === 4 && (
                             <div className="text-white/40 text-xs">Base price (up to 4 people)</div>
                           )}
                           <div className="text-gold font-heading text-2xl font-bold">${pkg.price.toLocaleString()}</div>
                         </div>
                         <div className="text-white/40 text-xs text-right">
-                          {pkg.maxPassengers === 1 ? "1 passenger" : "up to 6"}
+                          {pkg.maxPassengers === 1 ? "1 passenger" : `up to ${pkg.maxPassengers}`}
                         </div>
                       </div>
-                      {pkg.maxPassengers !== 1 && (
+                      {pkg.maxPassengers === 4 && (
                         <div className="text-white/40 text-xs mb-3">5th &amp; 6th person +$50 each</div>
                       )}
-                      {pkg.maxPassengers === 1 && <div className="mb-3" />}
+                      {pkg.maxPassengers !== 4 && <div className="mb-3" />}
                       <a
                         href="https://fishingbooker.com/embeds/book/2114018"
                         onClick={fireBookingConversion}
@@ -141,7 +141,7 @@ export default function ChartersPage() {
           )}
 
           <p className="text-white/40 text-sm text-center mt-8 max-w-2xl mx-auto">
-            <strong className="text-white/60">Pricing note:</strong> Base price covers up to 4 people. 5th and 6th passengers are $50 each. A gratuity of around 20% is customary and appreciated.
+            <strong className="text-white/60">Pricing note:</strong> Inshore charter base price covers up to 4 people — 5th &amp; 6th passengers add $50 each. All other charters accommodate up to 6 people at the listed price. A gratuity of around 20% is customary and appreciated.
           </p>
         </div>
       </section>

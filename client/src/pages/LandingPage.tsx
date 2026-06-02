@@ -20,7 +20,7 @@ const PACKAGES = [
     name: "Half-Day Bay",
     price: "$650",
     duration: "4 Hours",
-    group: "Up to 4",
+    isInshore: true,
     badge: "MOST POPULAR",
     badgeColor: "bg-[#C9A84C] text-[#0A1628]",
     description: "Mangroves, grass flats, and docks. Snook, redfish, trout, and snapper inside Sarasota Bay. Great for families and first-timers.",
@@ -30,7 +30,7 @@ const PACKAGES = [
     name: "Half-Day Gulf",
     price: "$750",
     duration: "4 Hours",
-    group: "Up to 4",
+    isInshore: false,
     badge: "CATCH DINNER",
     badgeColor: "bg-[#1B6CA8] text-white",
     description: "Run straight out to the nearshore reefs and ledges. Snapper, grouper, sheepshead, hogfish, and other pelagic species.",
@@ -40,7 +40,7 @@ const PACKAGES = [
     name: "Bucket List Trip",
     price: "$975",
     duration: "6 Hours",
-    group: "Up to 4",
+    isInshore: false,
     badge: "BUCKET LIST",
     badgeColor: "bg-[#8B1A1A] text-white",
     description: "Six hours dialed in on one trophy species — pick from tarpon, shark, or goliath grouper. Unforgettable.",
@@ -50,7 +50,7 @@ const PACKAGES = [
     name: "Full-Day Combo",
     price: "$1,400",
     duration: "8 Hours",
-    group: "Up to 4",
+    isInshore: false,
     badge: "BEST VALUE",
     badgeColor: "bg-[#2E7D32] text-white",
     description: "The whole story. Sunrise in the bay for snook and redfish, then out to the reefs for snapper and grouper.",
@@ -300,7 +300,7 @@ export default function LandingPage() {
               Sarasota Fishing Charter Packages
             </h2>
             <p className="text-gray-500 mt-3 max-w-xl mx-auto">
-              Base price is for up to 4 people. 5th &amp; 6th person add $50 each. All gear, bait, and Florida fishing license included.
+              Inshore charters: base price for up to 4 people (5th &amp; 6th person +$50 each). All other charters: listed price for up to 6 people. All gear, bait &amp; Florida fishing license included.
             </p>
           </div>
 
@@ -313,10 +313,14 @@ export default function LandingPage() {
                   </span>
                   <h3 className="text-[#0A1628] font-bold text-lg mb-1" style={{ fontFamily: "Georgia, serif" }}>{pkg.name}</h3>
                   <div className="text-3xl font-bold text-[#C9A84C]">{pkg.price}</div>
-                  <div className="text-gray-400 text-xs mb-2">base price · up to 4 people · 5th &amp; 6th +$50 each</div>
+                  {pkg.isInshore ? (
+                    <div className="text-gray-400 text-xs mb-2">base price · up to 4 people · 5th &amp; 6th +$50 each</div>
+                  ) : (
+                    <div className="text-gray-400 text-xs mb-2">up to 6 people</div>
+                  )}
                   <div className="flex items-center gap-3 text-gray-500 text-sm mb-3">
                     <span className="flex items-center gap-1"><Clock className="w-3.5 h-3.5" />{pkg.duration}</span>
-                    <span className="flex items-center gap-1"><Users className="w-3.5 h-3.5" />Up to 6</span>
+                    <span className="flex items-center gap-1"><Users className="w-3.5 h-3.5" />{pkg.isInshore ? "Up to 6" : "Up to 6"}</span>
                   </div>
                   <p className="text-gray-600 text-sm leading-relaxed mb-4">{pkg.description}</p>
                   <div className="flex flex-wrap gap-1">

@@ -211,14 +211,16 @@ function FeaturedCharters() {
                   <div className="border-t border-white/10 pt-4 mt-auto">
                     <div className="flex items-end justify-between mb-1">
                       <div>
-                        <div className="text-white/40 text-xs">Base price (up to 4 people)</div>
+                        {pkg.maxPassengers === 4 && (
+                          <div className="text-white/40 text-xs">Base price (up to 4 people)</div>
+                        )}
                         <div className="text-gold font-heading text-2xl font-bold">${pkg.price.toLocaleString()}</div>
                       </div>
                       <div className="text-white/40 text-xs text-right">
-                        {pkg.maxPassengers === 1 ? "1 passenger" : "up to 6"}
+                        {pkg.maxPassengers === 1 ? "1 passenger" : `up to ${pkg.maxPassengers}`}
                       </div>
                     </div>
-                    {pkg.maxPassengers !== 1 && (
+                    {pkg.maxPassengers === 4 && (
                       <div className="text-white/40 text-xs">5th &amp; 6th person +$50 each</div>
                     )}
                     <a
