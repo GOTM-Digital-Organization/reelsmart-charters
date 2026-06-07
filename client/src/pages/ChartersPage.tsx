@@ -46,8 +46,9 @@ export default function ChartersPage() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Sarasota Fishing Charter Packages & Pricing | Reel Smart Charters"
-        description="Browse all Sarasota fishing charter packages from Reel Smart Charters. Half-day inshore from $650, nearshore Gulf trips, full-day combos, sunset cruises & single angler. All gear, bait & FL fishing license included."
+        title="Fishing Charter Packages & Pricing"
+        description="Sarasota fishing charters from $650. Half-day inshore, nearshore Gulf, full-day combos, sunset cruises & single angler. All gear, bait & license included."
+        keywords="Sarasota fishing charter packages, inshore fishing charter prices, nearshore fishing Sarasota, half day fishing charter, full day fishing charter"
         canonical="/charters"
         jsonLd={[CHARTERS_SCHEMA, FAQ_SCHEMA]}
       />

@@ -37,8 +37,9 @@ export default function BookTripPage() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Book a Fishing Charter — Reel Smart Charters Sarasota FL"
-        description="Book your Sarasota fishing charter online with Reel Smart Charters. Secure booking powered by FishingBooker. Inshore, nearshore, sunset & full-day trips. All gear included."
+        title="Book a Fishing Charter"
+        description="Book your Sarasota fishing charter online with Reel Smart Charters. Powered by FishingBooker. Inshore, nearshore, sunset & full-day trips. All gear included."
+        keywords="book Sarasota fishing charter, fishing charter booking, book fishing trip Sarasota FL, FishingBooker Reel Smart Charters"
         canonical="/book"
         jsonLd={BOOK_SCHEMA}
       />

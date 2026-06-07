@@ -5,6 +5,7 @@ interface SEOHeadProps {
   description: string;
   canonical: string;
   ogImage?: string;
+  keywords?: string;
   jsonLd?: object | object[];
 }
 
@@ -17,6 +18,7 @@ export default function SEOHead({
   description,
   canonical,
   ogImage = DEFAULT_OG_IMAGE,
+  keywords,
   jsonLd,
 }: SEOHeadProps) {
   const fullTitle = title === SITE_NAME ? title : `${title} | ${SITE_NAME}`;
@@ -38,6 +40,7 @@ export default function SEOHead({
 
     // Standard meta
     setMeta('meta[name="description"]', "content", description);
+    if (keywords) setMeta('meta[name="keywords"]', "content", keywords);
     setMeta('meta[name="robots"]', "content", "index, follow");
 
     // Open Graph
@@ -76,7 +79,7 @@ export default function SEOHead({
         document.head.appendChild(script);
       });
     }
-  }, [fullTitle, description, canonicalUrl, ogImage, jsonLd]);
+  }, [fullTitle, description, canonicalUrl, ogImage, keywords, jsonLd]);
 
   return null;
 }

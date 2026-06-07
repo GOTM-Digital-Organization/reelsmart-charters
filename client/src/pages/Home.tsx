@@ -483,8 +483,9 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Sarasota Fishing Charters — Reel Smart Charters | USCG Licensed Captain Jon"
-        description="Reel Smart Charters offers private inshore and nearshore fishing charters in Sarasota, Bradenton, and Venice, FL. USCG licensed Captain Jon. All gear, bait & license included. Book online today!"
+        title="Sarasota Fishing Charters"
+        description="Private inshore & nearshore fishing charters in Sarasota, Bradenton & Venice, FL. USCG licensed Captain Jon. All gear, bait & license included."
+        keywords="Sarasota fishing charters, inshore fishing Sarasota, nearshore fishing charters, fishing charter Sarasota FL, Captain Jon fishing"
         canonical="/"
         jsonLd={[
           {

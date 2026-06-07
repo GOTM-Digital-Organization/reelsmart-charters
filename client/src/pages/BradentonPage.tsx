@@ -33,8 +33,9 @@ export default function BradentonPage() {
   return (
     <>
       <SEOHead
-        title="Fishing Charters Bradenton FL — Tampa Bay Inshore & Nearshore | Reel Smart Charters"
-        description="Top-rated fishing charters in Bradenton, FL. Fish Tampa Bay, the Manatee River, and nearshore Gulf waters for snook, redfish, tarpon, and more. Private charters with USCG licensed Captain Jon."
+        title="Fishing Charters Bradenton FL"
+        description="Top-rated fishing charters in Bradenton, FL. Fish Tampa Bay & nearshore Gulf for snook, redfish & tarpon. Private charters with USCG licensed Captain Jon."
+        keywords="fishing charters Bradenton FL, Bradenton Florida fishing, Tampa Bay fishing charters, inshore fishing Bradenton, Captain Jon Bradenton"
         canonical="/fishing-charters-bradenton-fl"
         jsonLd={[BRADENTON_SCHEMA, BRADENTON_BREADCRUMB_SCHEMA]}
       />

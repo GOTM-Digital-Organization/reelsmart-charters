@@ -27,8 +27,9 @@ export default function TestimonialsPage() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Customer Reviews & Testimonials — Reel Smart Charters Sarasota FL"
-        description="Read five-star customer reviews for Reel Smart Charters in Sarasota, FL. Real testimonials from anglers who've fished the inshore and nearshore waters of Southwest Florida with Captain Jon."
+        title="Customer Reviews & Testimonials"
+        description="Read five-star customer reviews for Reel Smart Charters in Sarasota, FL. Real testimonials from anglers who've fished Southwest Florida waters with Captain Jon."
+        keywords="Reel Smart Charters reviews, Sarasota fishing charter reviews, Captain Jon Smart testimonials, fishing charter customer reviews"
         canonical="/testimonials"
         jsonLd={TESTIMONIALS_SCHEMA}
       />

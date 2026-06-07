@@ -33,8 +33,9 @@ export default function VenicePage() {
   return (
     <>
       <SEOHead
-        title="Fishing Charters Venice FL — Inshore & Nearshore | Reel Smart Charters"
-        description="Top-rated fishing charters in Venice, FL. Target snook, redfish, tarpon, and more on private inshore and nearshore trips with USCG licensed Captain Jon. All gear, bait & license included."
+        title="Fishing Charters Venice FL"
+        description="Top-rated fishing charters in Venice, FL. Target snook, redfish & tarpon on private inshore & nearshore trips with USCG licensed Captain Jon."
+        keywords="fishing charters Venice FL, Venice Florida fishing, inshore fishing Venice, nearshore fishing Venice FL, Captain Jon Venice"
         canonical="/fishing-charters-venice-fl"
         jsonLd={[VENICE_SCHEMA, VENICE_BREADCRUMB_SCHEMA]}
       />

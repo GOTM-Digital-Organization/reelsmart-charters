@@ -53,8 +53,9 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="Fishing Photo Gallery — Reel Smart Charters Sarasota FL"
-        description="Browse the Reel Smart Charters photo gallery — real fishing trips, real catches, and real smiles from the inshore and nearshore waters of Sarasota, Bradenton, and Venice, Florida."
+        title="Fishing Photo Gallery"
+        description="Browse the Reel Smart Charters photo gallery — real catches and real smiles from the inshore and nearshore waters of Sarasota, Bradenton, and Venice, FL."
+        keywords="Sarasota fishing charter photos, fishing gallery Sarasota FL, inshore fishing photos, Reel Smart Charters gallery, fishing catch photos"
         canonical="/gallery"
         jsonLd={GALLERY_SCHEMA}
       />

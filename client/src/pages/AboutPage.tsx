@@ -38,8 +38,9 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="About Captain Jon Smart | USCG Licensed Sarasota Fishing Charter Captain"
-        description="Meet Captain Jon Smart, USCG licensed charter captain and owner of Reel Smart Charters in Sarasota, FL. 25+ years fishing Sarasota Bay, the Gulf of Mexico, and Southwest Florida waters. Private charters for all skill levels."
+        title="About Captain Jon Smart"
+        description="Meet Captain Jon Smart, USCG licensed charter captain in Sarasota, FL. 25+ years on Sarasota Bay and the Gulf. Private charters for all skill levels."
+        keywords="Captain Jon Smart, Sarasota fishing charter captain, USCG licensed captain, Reel Smart Charters, Sarasota Bay fishing"
         canonical="/about"
         jsonLd={[ABOUT_SCHEMA, PERSON_SCHEMA]}
       />

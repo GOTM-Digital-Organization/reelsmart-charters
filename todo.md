@@ -70,3 +70,10 @@
 - [x] Update Venice and Bradenton pages booking buttons
 - [x] Add FishingBooker trust badge sitewide
 - [x] Update App.tsx route /contact -> /book
+
+## SEO Title/Description/Keywords Fix
+- [x] Fix Home page title to render under 60 chars ("Sarasota Fishing Charters | Reel Smart Charters" = 47 chars)
+- [x] Fix all page titles to render under 60 chars (all pages now 43–56 chars)
+- [x] Fix all page descriptions to be under 160 chars (all pages now 141–160 chars)
+- [x] Add keywords meta tag to SEOHead component
+- [x] Add keywords prop to all pages (Home, Charters, About, Venice, Bradenton, Gallery, Testimonials, BookTrip)
