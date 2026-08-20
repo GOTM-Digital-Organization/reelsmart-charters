@@ -3,7 +3,7 @@ import { Link, useLocation } from "wouter";
 import { Menu, X } from "lucide-react";
 import { useAuth } from "@/_core/hooks/useAuth";
 
-const LOGO = "/manus-storage/reel-smart-logo-transparent_724165ca.png";
+const LOGO = "/images/logo.png";
 
 const NAV_LINKS = [
   { label: "Home", href: "/" },

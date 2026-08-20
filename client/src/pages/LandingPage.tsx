@@ -3,16 +3,16 @@ import { fireCallConversion, fireBookingConversion } from "@/lib/gtag";
 import { Phone, Star, Shield, Fish, Clock, Users, CheckCircle, ChevronDown, Award } from "lucide-react";
 
 const PHOTOS = {
-  hero: "/manus-storage/captain-jon-boat-hero_9cb22e21.jpeg",
-  boat: "/manus-storage/IMG_2307_3c222ea8.jpeg",
-  fighting: "/manus-storage/IMG_1911_dc01a577.webp",
-  snapper: "/manus-storage/IMG_2510_df2d5dc8.webp",
-  snook: "/manus-storage/IMG_2061_f2c08380.webp",
-  redfish: "/manus-storage/IMG_4281_330f7c42.webp",
-  hogfish: "/manus-storage/IMG_2671_3e01b874.webp",
-  crew: "/manus-storage/IMG_3729_533ea3f4.webp",
-  grouper: "/manus-storage/IMG_2267_006b4b01.webp",
-  trout: "/manus-storage/IMG_2101_de18cff3.webp",
+  hero: "/images/hero-boat.jpeg",
+  boat: "/images/photo-2307.jpeg",
+  fighting: "/images/photo-1911.webp",
+  snapper: "/images/photo-2510.webp",
+  snook: "/images/photo-2061.webp",
+  redfish: "/images/photo-4281.webp",
+  hogfish: "/images/photo-2671.webp",
+  crew: "/images/photo-3729.webp",
+  grouper: "/images/photo-2267.webp",
+  trout: "/images/photo-2101.webp",
 };
 
 const PACKAGES = [
@@ -141,7 +141,7 @@ export default function LandingPage() {
         <div className="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <img
-              src="/manus-storage/reel-smart-logo-transparent_724165ca.png"
+              src="/images/logo.png"
               alt="Reel Smart Charters"
               className="h-10 w-auto object-contain rounded"
               style={{ backgroundColor: "#fff", padding: "4px" }}
