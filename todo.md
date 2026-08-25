@@ -77,3 +77,6 @@
 - [x] Fix all page descriptions to be under 160 chars (all pages now 141–160 chars)
 - [x] Add keywords meta tag to SEOHead component
 - [x] Add keywords prop to all pages (Home, Charters, About, Venice, Bradenton, Gallery, Testimonials, BookTrip)
+
+## External Deployment Compatibility
+- [x] Add Netlify single-page-app fallback so direct URLs such as /sarasota-fishing-charters-lp resolve after deployment

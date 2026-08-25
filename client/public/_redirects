@@ -1,0 +1,3 @@
+# Netlify SPA fallback: send every direct route to the React entry point.
+# Wouter then renders the matching page, including the Google Ads landing page.
+/*    /index.html   200
