@@ -6,12 +6,12 @@ import Footer from "@/components/Footer";
 import SEOHead, { LOCAL_BUSINESS_SCHEMA } from "@/components/SEOHead";
 
 const PHOTOS = {
-  boat1: "/manus-storage/IMG_2307_3c222ea8.jpeg",
-  boat2: "/manus-storage/IMG_2743_921fdb55.webp",
-  fighting: "/manus-storage/IMG_1911_dc01a577.webp",
-  redfish: "/manus-storage/IMG_4281_330f7c42.webp",
-  crew: "/manus-storage/IMG_3729_533ea3f4.webp",
-  snook: "/manus-storage/IMG_2061_f2c08380.webp",
+  boat1: "/images/photo-2307.jpeg",
+  boat2: "/images/photo-2743.webp",
+  fighting: "/images/photo-1911.webp",
+  redfish: "/images/photo-4281.webp",
+  crew: "/images/photo-3729.webp",
+  snook: "/images/photo-2061.webp",
 };
 
 const ABOUT_SCHEMA = {

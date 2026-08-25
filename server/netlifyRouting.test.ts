@@ -9,4 +9,27 @@ describe("Netlify single-page-app routing", () => {
 
     expect(redirects).toContain("/*    /index.html   200");
   });
+
+  it("includes the static image assets used by the Netlify build", () => {
+    const imagesDir = path.resolve(import.meta.dirname, "../client/public/images");
+    const requiredFiles = [
+      "captain-jon-boat-hero.jpeg",
+      "hero-boat.jpeg",
+      "logo.png",
+      "photo-1911.webp",
+      "photo-2061.webp",
+      "photo-2101.webp",
+      "photo-2267.webp",
+      "photo-2307.jpeg",
+      "photo-2510.webp",
+      "photo-2671.webp",
+      "photo-2743.webp",
+      "photo-3729.webp",
+      "photo-4281.webp",
+    ];
+
+    for (const filename of requiredFiles) {
+      expect(fs.existsSync(path.join(imagesDir, filename))).toBe(true);
+    }
+  });
 });

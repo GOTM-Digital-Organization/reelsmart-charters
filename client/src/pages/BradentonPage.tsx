@@ -6,10 +6,10 @@ import Footer from "@/components/Footer";
 import SEOHead, { LOCAL_BUSINESS_SCHEMA } from "@/components/SEOHead";
 
 const PHOTOS = {
-  hero: "/manus-storage/IMG_2743_921fdb55.webp",
-  fish1: "/manus-storage/IMG_2101_de18cff3.webp",
-  fish2: "/manus-storage/IMG_2671_3e01b874.webp",
-  boat: "/manus-storage/IMG_3729_533ea3f4.webp",
+  hero: "/images/photo-2743.webp",
+  fish1: "/images/photo-2101.webp",
+  fish2: "/images/photo-2671.webp",
+  boat: "/images/photo-3729.webp",
 };
 
 const BRADENTON_SCHEMA = {

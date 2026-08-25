@@ -6,10 +6,10 @@ import Footer from "@/components/Footer";
 import SEOHead, { LOCAL_BUSINESS_SCHEMA } from "@/components/SEOHead";
 
 const PHOTOS = {
-  hero: "/manus-storage/IMG_2267_006b4b01.webp",
-  fish1: "/manus-storage/IMG_2061_f2c08380.webp",
-  fish2: "/manus-storage/IMG_4281_330f7c42.webp",
-  boat: "/manus-storage/IMG_2307_3c222ea8.jpeg",
+  hero: "/images/photo-2267.webp",
+  fish1: "/images/photo-2061.webp",
+  fish2: "/images/photo-4281.webp",
+  boat: "/images/photo-2307.jpeg",
 };
 
 const VENICE_SCHEMA = {

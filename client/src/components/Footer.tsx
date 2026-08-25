@@ -2,7 +2,7 @@ import { Link } from "wouter";
 import { fireCallConversion } from "@/lib/gtag";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 
-const LOGO = "/manus-storage/reel-smart-logo-transparent_724165ca.png";
+const LOGO = "/images/logo.png";
 
 export default function Footer() {
   return (

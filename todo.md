@@ -80,3 +80,6 @@
 
 ## External Deployment Compatibility
 - [x] Add Netlify single-page-app fallback so direct URLs such as /sarasota-fishing-charters-lp resolve after deployment
+- [ ] Connect the local project to the existing GitHub repository without creating a duplicate repository
+- [ ] Safely synchronize the Netlify image-hosting changes with the latest Manus changes and push the verified result to GitHub main
+- [ ] Verify Netlify continuous deployment from the GitHub main branch

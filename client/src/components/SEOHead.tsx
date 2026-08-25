@@ -11,7 +11,7 @@ interface SEOHeadProps {
 
 const SITE_NAME = "Reel Smart Charters";
 const BASE_URL = "https://www.reelsmartcharters.com";
-const DEFAULT_OG_IMAGE = `${BASE_URL}/manus-storage/IMG_8048_c31d63c6.jpeg`;
+const DEFAULT_OG_IMAGE = `${BASE_URL}/images/hero-boat.jpeg`;
 
 export default function SEOHead({
   title,
@@ -93,7 +93,7 @@ export const LOCAL_BUSINESS_SCHEMA = {
   description:
     "Premium inshore and nearshore fishing charters in the back bays, mangroves, and coastal waters of Southwest Florida. USCG licensed Captain Jon.",
   url: BASE_URL,
-  logo: `${BASE_URL}/manus-storage/reel-smart-logo-transparent_724165ca.png`,
+  logo: `${BASE_URL}/images/logo.png`,
   image: DEFAULT_OG_IMAGE,
   telephone: "+19417025895",
   email: "Fish@reelsmartcharters.com",

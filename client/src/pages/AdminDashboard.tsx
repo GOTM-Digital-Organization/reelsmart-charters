@@ -27,7 +27,7 @@ function AuthGate({ children }: { children: React.ReactNode }) {
         <div className="bg-navy-mid rounded-2xl p-8 max-w-sm w-full text-center border border-white/10">
           <div className="flex items-center justify-center mx-auto mb-4">
             <img
-              src="/manus-storage/reel-smart-logo-transparent_724165ca.png"
+              src="/images/logo.png"
               alt="Reel Smart Charters"
               className="h-20 w-auto object-contain rounded-lg"
               style={{ backgroundColor: '#ffffff', padding: '6px 12px' }}
@@ -240,7 +240,7 @@ function GalleryManager() {
           <h4 className="text-gold font-heading text-sm font-semibold mb-4">Add Photo</h4>
           <div className="space-y-3">
             <div>
-              <label className="block text-white/60 text-xs font-heading tracking-wider uppercase mb-1">Storage URL (e.g. /manus-storage/...)</label>
+              <label className="block text-white/60 text-xs font-heading tracking-wider uppercase mb-1">Image URL (e.g. /images/...)</label>
               <input type="text" value={form.url} onChange={(e) => setForm({ ...form, url: e.target.value })} required
                 className="w-full bg-navy border border-white/20 rounded-lg px-3 py-2 text-white text-sm focus:outline-none focus:border-gold" />
             </div>
@@ -488,7 +488,7 @@ function Dashboard() {
         <div className="flex items-center gap-3">
           <Link href="/" className="flex items-center group">
             <img
-              src="/manus-storage/reel-smart-logo-transparent_724165ca.png"
+              src="/images/logo.png"
               alt="Reel Smart Charters"
               className="h-10 w-auto object-contain rounded-md"
               style={{ backgroundColor: '#ffffff', padding: '3px 6px' }}

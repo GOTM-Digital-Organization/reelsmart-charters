@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead, { LOCAL_BUSINESS_SCHEMA } from "@/components/SEOHead";
 
-const HERO_IMG = "/manus-storage/IMG_3729_533ea3f4.webp";
+const HERO_IMG = "/images/photo-3729.webp";
 
 const TESTIMONIALS_SCHEMA = {
   ...LOCAL_BUSINESS_SCHEMA,

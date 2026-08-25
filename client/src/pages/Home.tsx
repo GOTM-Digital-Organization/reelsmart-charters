@@ -8,19 +8,19 @@ import Footer from "@/components/Footer";
 import SEOHead, { LOCAL_BUSINESS_SCHEMA } from "@/components/SEOHead";
 
 const PHOTOS = {
-  shark: "/manus-storage/IMG_8048_c31d63c6.jpeg",
-  boat1: "/manus-storage/IMG_2307_3c222ea8.jpeg",
-  boat2: "/manus-storage/IMG_2743_921fdb55.webp",
-  fighting: "/manus-storage/IMG_1911_dc01a577.webp",
-  snapper: "/manus-storage/IMG_2510_df2d5dc8.webp",
-  grouper: "/manus-storage/IMG_2267_006b4b01.webp",
-  snook: "/manus-storage/IMG_2061_f2c08380.webp",
-  trout1: "/manus-storage/IMG_2101_de18cff3.webp",
-  trout2: "/manus-storage/IMG_1284_cba6302c.webp",
-  trigger: "/manus-storage/IMG_3020_55518751.webp",
-  hogfish: "/manus-storage/IMG_2671_3e01b874.webp",
-  redfish: "/manus-storage/IMG_4281_330f7c42.webp",
-  crew: "/manus-storage/IMG_3729_533ea3f4.webp",
+  shark: "/images/hero-boat.jpeg",
+  boat1: "/images/photo-2307.jpeg",
+  boat2: "/images/photo-2743.webp",
+  fighting: "/images/photo-1911.webp",
+  snapper: "/images/photo-2510.webp",
+  grouper: "/images/photo-2267.webp",
+  snook: "/images/photo-2061.webp",
+  trout1: "/images/photo-2101.webp",
+  trout2: "/images/photo-1284.webp",
+  trigger: "/images/photo-3020.webp",
+  hogfish: "/images/photo-2671.webp",
+  redfish: "/images/photo-4281.webp",
+  crew: "/images/photo-3729.webp",
 };
 
 const HERO_SLIDES = [
