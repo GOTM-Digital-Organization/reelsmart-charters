@@ -11,7 +11,7 @@ interface SEOHeadProps {
 
 const SITE_NAME = "Reel Smart Charters";
 const BASE_URL = "https://www.reelsmartcharters.com";
-const DEFAULT_OG_IMAGE = `${BASE_URL}/images/hero-boat.jpeg`;
+const DEFAULT_OG_IMAGE = `${BASE_URL}/images/reel-smart-wrap-action-hero.webp`;
 
 export default function SEOHead({
   title,

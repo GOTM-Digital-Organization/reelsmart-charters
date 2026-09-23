@@ -7,7 +7,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead, { LOCAL_BUSINESS_SCHEMA } from "@/components/SEOHead";
 
-const HERO_IMG = "/images/hero-boat.jpeg";
+const HERO_IMG = "/images/reel-smart-wrap-action-hero.webp";
 
 const GALLERY_SCHEMA = {
   ...LOCAL_BUSINESS_SCHEMA,
@@ -63,7 +63,7 @@ export default function GalleryPage() {
 
       {/* Page Hero */}
       <section className="relative pt-32 pb-20 overflow-hidden">
-        <img src={HERO_IMG} alt="Big shark catch on a Reel Smart Charter" className="absolute inset-0 w-full h-full object-cover object-top" />
+        <img src={HERO_IMG} alt="Captain Jon driving the newly wrapped Reel Smart Charters boat with guests aboard" className="absolute inset-0 w-full h-full object-cover object-center" />
         <div className="absolute inset-0 bg-gradient-to-b from-navy/85 via-navy/70 to-navy/90" />
         <div className="container relative z-10 text-center">
           <p className="section-label mb-4">Real Trips. Real Fish.</p>

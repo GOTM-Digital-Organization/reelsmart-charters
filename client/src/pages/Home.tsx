@@ -11,6 +11,9 @@ const PHOTOS = {
   shark: "/images/hero-boat.jpeg",
   boat1: "/images/photo-2307.jpeg",
   boat2: "/images/photo-2743.webp",
+  wrapAction: "/images/reel-smart-wrap-action-hero.webp",
+  wrapBoat: "/images/reel-smart-wrap-boat-hero.webp",
+  captainHelm: "/images/reel-smart-wrap-captain-helm.webp",
   fighting: "/images/photo-1911.webp",
   snapper: "/images/photo-2510.webp",
   grouper: "/images/photo-2267.webp",
@@ -24,9 +27,9 @@ const PHOTOS = {
 };
 
 const HERO_SLIDES = [
-  { src: PHOTOS.boat1, alt: "Reel Smart Charters fishing boat on the water" },
-  { src: PHOTOS.fighting, alt: "Angler fighting a big fish on a Reel Smart Charter" },
-  { src: PHOTOS.boat2, alt: "Reel Smart Charters vessel heading out to sea" },
+  { src: PHOTOS.wrapAction, alt: "Captain Jon driving the Reel Smart Charters boat with three anglers aboard" },
+  { src: PHOTOS.wrapBoat, alt: "Reel Smart Charters boat with its new blue wrap on Sarasota Bay" },
+  { src: PHOTOS.captainHelm, alt: "Captain Jon at the helm of the newly wrapped Reel Smart Charters boat" },
 ];
 
 // ── Hero ──────────────────────────────────────────────────────────────────────

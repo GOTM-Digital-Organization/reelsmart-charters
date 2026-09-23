@@ -3,7 +3,7 @@ import { fireCallConversion, fireBookingConversion } from "@/lib/gtag";
 import { Phone, Star, Shield, Fish, Clock, Users, CheckCircle, ChevronDown, Award } from "lucide-react";
 
 const PHOTOS = {
-  hero: "/images/captain-jon-boat-hero.jpeg",
+  hero: "/images/reel-smart-wrap-action-hero.webp",
   boat: "/images/photo-2307.jpeg",
   fighting: "/images/photo-1911.webp",
   snapper: "/images/photo-2510.webp",
@@ -173,7 +173,7 @@ export default function LandingPage() {
       <section className="relative min-h-[92vh] flex items-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover"
-          style={{ backgroundImage: `url(${PHOTOS.hero})`, backgroundPosition: "center 40%" }}
+          style={{ backgroundImage: `url(${PHOTOS.hero})`, backgroundPosition: "center center" }}
         />
         <div className="absolute inset-0" style={{ background: "linear-gradient(to right, rgba(10,22,40,0.60) 40%, rgba(10,22,40,0.20) 100%)" }} />
 
