@@ -149,7 +149,7 @@ function AboutPreview() {
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <div className="relative">
             <div className="grid grid-cols-2 gap-3">
-              <img src={PHOTOS.boat1} alt="Reel Smart Charters vessel" className="rounded-lg object-cover w-full h-56 md:h-72 shadow-xl" />
+              <img src={PHOTOS.wrapAction} alt="Captain Jon driving the newly wrapped Reel Smart Charters boat with anglers aboard" className="rounded-lg object-cover object-[62%_center] w-full h-56 md:h-72 shadow-xl" />
               <img src={PHOTOS.redfish} alt="Happy angler with redfish" className="rounded-lg object-cover w-full h-56 md:h-72 shadow-xl mt-8" />
             </div>
             <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-navy text-white px-6 py-3 rounded-full shadow-xl border border-gold/30 whitespace-nowrap">
