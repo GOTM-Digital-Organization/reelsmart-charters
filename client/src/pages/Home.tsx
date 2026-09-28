@@ -2,10 +2,11 @@ import { fireBookingConversion } from "@/lib/gtag";
 import { useState, useEffect } from "react";
 import { Link } from "wouter";
 import { trpc } from "@/lib/trpc";
-import { Star, Shield, Fish, Anchor, Users, ChevronDown, ChevronLeft, ChevronRight, ArrowRight, MapPin, Phone, ChevronUp } from "lucide-react";
+import { Star, Shield, Fish, Anchor, Users, ChevronDown, ChevronLeft, ChevronRight, ArrowRight, MapPin, Phone, ChevronUp, CalendarDays, Clock } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead, { LOCAL_BUSINESS_SCHEMA } from "@/components/SEOHead";
+import { LATEST_FISHING_REPORT } from "@/content/fishingReports";
 
 const PHOTOS = {
   shark: "/images/hero-boat.jpeg",
@@ -288,6 +289,43 @@ function GalleryPreview() {
   );
 }
 
+// ── Fishing Reports Preview ───────────────────────────────────────────────────
+function FishingReportsPreview() {
+  const report = LATEST_FISHING_REPORT;
+
+  return (
+    <section className="py-20 md:py-28 bg-white">
+      <div className="container">
+        <div className="grid gap-10 lg:grid-cols-[minmax(0,1.05fr)_minmax(0,0.95fr)] lg:items-center">
+          <div className="overflow-hidden rounded-2xl shadow-xl shadow-navy/10">
+            <img src={report.heroImage} alt={report.heroAlt} className="aspect-[16/10] h-full w-full object-cover object-center" loading="lazy" />
+          </div>
+          <div>
+            <p className="section-label mb-3">Captain’s Weekly Intel</p>
+            <h2 className="text-navy text-3xl md:text-4xl mb-4" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>
+              Fishing Reports From the Waters We Fish
+            </h2>
+            <p className="text-gray-600 leading-relaxed mb-6">
+              Get the local read on what’s biting, where to look and how the season is shaping up around Sarasota Bay, Siesta Key, Longboat Key, Venice and the nearshore Gulf.
+            </p>
+            <article className="rounded-xl border border-gray-100 bg-off-white p-5 md:p-6">
+              <div className="flex flex-wrap gap-x-5 gap-y-2 text-xs font-heading tracking-wide uppercase text-gray-500 mb-3">
+                <span className="inline-flex items-center gap-1.5"><CalendarDays className="h-3.5 w-3.5 text-gold" /> {report.date}</span>
+                <span className="inline-flex items-center gap-1.5"><Clock className="h-3.5 w-3.5 text-gold" /> {report.readTime}</span>
+              </div>
+              <h3 className="text-navy text-2xl leading-tight mb-3" style={{ fontFamily: "var(--font-display)", fontWeight: 700 }}>{report.shortTitle}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-5">{report.excerpt}</p>
+              <Link href={`/fishing-reports/${report.slug}`} className="inline-flex items-center gap-2 text-gold hover:text-navy transition-colors font-heading text-sm">
+                Read This Week’s Fishing Report <ArrowRight className="h-4 w-4" />
+              </Link>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 // ── Testimonials Preview ──────────────────────────────────────────────────────
 function TestimonialsPreview() {
   const { data: reviews } = trpc.testimonials.list.useQuery();
@@ -536,6 +574,7 @@ export default function Home() {
       <StatsBar />
       <AboutPreview />
       <FeaturedCharters />
+      <FishingReportsPreview />
       <GalleryPreview />
       <TestimonialsPreview />
       <ServiceArea />

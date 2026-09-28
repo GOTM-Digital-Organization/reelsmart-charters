@@ -60,6 +60,7 @@ export default function Footer() {
                 { label: "Home", href: "/" },
                 { label: "About Captain Jon", href: "/about" },
                 { label: "Trips & Rates", href: "/charters" },
+                { label: "Fishing Reports", href: "/fishing-reports" },
                 { label: "Photo Gallery", href: "/gallery" },
                 { label: "Testimonials", href: "/testimonials" },
                 { label: "Book a Trip", href: "/book" },

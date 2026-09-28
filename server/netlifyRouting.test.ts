@@ -19,6 +19,7 @@ describe("Netlify single-page-app routing", () => {
       "reel-smart-wrap-action-hero.webp",
       "reel-smart-wrap-boat-hero.webp",
       "reel-smart-wrap-captain-helm.webp",
+      "sarasota-fishing-report-september-28-2026-cover.webp",
       "photo-1911.webp",
       "photo-2061.webp",
       "photo-2101.webp",

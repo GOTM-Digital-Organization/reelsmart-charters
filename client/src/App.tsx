@@ -14,6 +14,8 @@ import AdminDashboard from "./pages/AdminDashboard";
 import VenicePage from "./pages/VenicePage";
 import BradentonPage from "./pages/BradentonPage";
 import LandingPage from "./pages/LandingPage";
+import FishingReportsPage from "./pages/FishingReportsPage";
+import FishingReportPage from "./pages/FishingReportPage";
 
 function Router() {
   return (
@@ -29,6 +31,8 @@ function Router() {
       <Route path="/fishing-charters-venice-fl" component={VenicePage} />
       <Route path="/fishing-charters-bradenton-fl" component={BradentonPage} />
       <Route path="/sarasota-fishing-charters-lp" component={LandingPage} />
+      <Route path="/fishing-reports" component={FishingReportsPage} />
+      <Route path="/fishing-reports/:slug" component={FishingReportPage} />
       <Route path="/404" component={NotFound} />
       <Route component={NotFound} />
     </Switch>

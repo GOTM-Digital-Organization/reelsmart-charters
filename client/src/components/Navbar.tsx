@@ -9,6 +9,7 @@ const NAV_LINKS = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Charters", href: "/charters" },
+  { label: "Fishing Reports", href: "/fishing-reports" },
   { label: "Gallery", href: "/gallery" },
   { label: "Testimonials", href: "/testimonials" },
   { label: "Book Trip", href: "/book" },
@@ -50,7 +51,7 @@ export default function Navbar() {
         </Link>
 
         {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-6">
+        <div className="hidden lg:flex items-center gap-5">
           {NAV_LINKS.map((l) => (
             <Link
               key={l.label}
@@ -84,7 +85,7 @@ export default function Navbar() {
 
         {/* Mobile hamburger */}
         <button
-          className="md:hidden text-white p-2"
+          className="lg:hidden text-white p-2"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -94,7 +95,7 @@ export default function Navbar() {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden bg-navy border-t border-white/10 px-6 pb-6 pt-2">
+        <div className="lg:hidden bg-navy border-t border-white/10 px-6 pb-6 pt-2">
           {NAV_LINKS.map((l) => (
             <Link
               key={l.label}
